@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="apprtc.preeyakamon.hiddinword" >
+    package="apprtc.preeyakamon.hiddinword">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".Authen"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".play"
-            android:label="@string/title_activity_play" >
-        </activity>
+            android:label="@string/title_activity_play" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUp"></activity>
     </application>
 
 </manifest>
