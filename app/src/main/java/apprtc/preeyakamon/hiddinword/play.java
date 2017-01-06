@@ -31,9 +31,10 @@ public class play extends ActionBarActivity {
         init_view();
         Read_Question();
 
+        //หมายถึง Index ของคำถาม
         Quest_Item = rndQuest.nextInt(250) + 1;
         Screen_Refresh();
-    }
+    }   // Main Method
 
     public void onClickTex(View view) {
         switch (view.getId()) {
