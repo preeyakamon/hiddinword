@@ -1,0 +1,359 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="apprtc.preeyakamon.hiddinword.play"
+    android:focusable="false"
+    android:id="@+id/activity_play"
+    android:background="@drawable/game1">
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/all">
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="Q"
+            android:id="@+id/btnQ"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="W"
+            android:id="@+id/btnW"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="E"
+            android:id="@+id/btnE"
+            android:layout_marginLeft="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="R"
+            android:id="@+id/btnR"
+            android:layout_marginLeft="150dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="T"
+            android:id="@+id/btnT"
+            android:layout_marginLeft="200dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="Y"
+            android:id="@+id/btnY"
+            android:layout_marginLeft="250dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="U"
+            android:id="@+id/btnU"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="150dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="I"
+            android:id="@+id/btnI"
+            android:layout_marginTop="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="O"
+            android:id="@+id/btnO"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="P"
+            android:id="@+id/btnP"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="A"
+            android:id="@+id/btnA"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="150dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="S"
+            android:id="@+id/btnS"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="D"
+            android:id="@+id/btnD"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="250dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="F"
+            android:id="@+id/btnF"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="120dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="G"
+            android:id="@+id/btnG"
+            android:layout_marginTop="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="H"
+            android:id="@+id/btnH"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="J"
+            android:id="@+id/btnJ"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="K"
+            android:id="@+id/btnK"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="150dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="L"
+            android:id="@+id/btnL"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="200dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="Z"
+            android:id="@+id/btnZ"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="250dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="X"
+            android:id="@+id/btnX"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="170dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="C"
+            android:id="@+id/btnC"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="V"
+            android:id="@+id/btnV"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="B"
+            android:id="@+id/btnB"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="220dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="N"
+            android:id="@+id/btnN"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="70dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="M"
+            android:id="@+id/btnM"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="120dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:text="Clear"
+            android:id="@+id/btnCLE"
+            android:layout_marginTop="203dp"
+            android:layout_marginLeft="180dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="#ffffc2e8"
+            android:onClick="onClickClear" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtAns"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="50dp"
+        android:background="#ffeeffb4"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:text=""
+        android:id="@+id/txtQuest"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#ffffbea5" />
+
+</RelativeLayout>

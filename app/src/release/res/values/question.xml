@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Questions_1">
+        <item>S_ _ _ M _ _ _                  (ว่ายน้ำ)</item>
+        <item>SWIMMING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_2">
+        <item>_ A _ _ E _ B _ _ _           (บาสเก็ตบอล)</item>
+        <item>BASKETBALL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions_3">
+        <item>B _ _ M I _ _ _ _              (แบดมินตัน)</item>
+        <item>BADMINTON</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_4">
+        <item>_ _O _ _ A _ L                 (ฟุตบอล)</item>
+        <item>FOOTBALL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_5">
+        <item>V _ _ L _ _ B _ _ _           (วอลเลย์บอล)</item>
+        <item>VOLLEYBALL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions_6">
+        <item>_ _ W _ I _ G                   (โบว์ลิ่ง)</item>
+        <item>BOWLING</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_7">
+        <item>T _ E _ W _ _ _ O_          (เทควันโด)</item>
+        <item>TAEKWONDO</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_8">
+        <item>_ _ E _ H _ _ _F _ _ _ G   (ยกน้ำหนัก)</item>
+        <item>WEIGHTLIFTING</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions_9">
+        <item>YA _ _ T_N_                   (เรือใบ)</item>
+        <item>YACHTING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_10">
+        <item>_Y_ _A _ _ _C_               (ยิมนาสติก)</item>
+        <item>GYMNASTICS</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions_11">
+        <item>S_ _ O_ _ N_                   (ยิงปืน)</item>
+        <item>SHOOTING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_12">
+        <item>F_N_ _ _G                       (ฟันดาบ)</item>
+        <item>FENCING</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_13">
+        <item>_A_L_ T _ _N_S             (เทเบิ้ลเทนนิส)</item>
+        <item>TABLE TENNIS</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions_14">
+        <item>A_ _L_T_ _S                  (กรีฑา)</item>
+        <item>ATHLETICS</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_15">
+        <item>_R_H_R_                        (ยิงธนู)</item>
+        <item>ARCHERY</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_16">
+        <item>G_L_                              (กอฟล์)</item>
+        <item>GOLF</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_17">
+        <item>P_ _L                             (สระน้ำ)</item>
+        <item>POOL</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_18">
+        <item>B_ _I_G                         (มวย)</item>
+        <item>BOXING</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_19">
+        <item>W_E_ _L _ _ _             (มวยปล้ำ)</item>
+        <item>WRESTLING</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_20">
+        <item>H_C_ _Y                       (ฮอกกี้)</item>
+        <item>HOCKEY</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_21">
+        <item>_Q_I_ _E_                    (กระรอก)</item>
+        <item>SQUIRREL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_22">
+        <item>D_E_                            (กวาง)</item>
+        <item>DEEL</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_23">
+        <item>S_E_P                           (แกะ)</item>
+        <item>SHEEP</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_24">
+        <item>C_ _C_ _N                    (ไก่)</item>
+        <item>CHICKEN</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_25">
+        <item>D_ _                              (หมา)</item>
+        <item>DOG</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_26">
+        <item>C_T                              (แมว)</item>
+        <item>CAT</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_27">
+        <item>_I_N                             (สิงโต)</item>
+        <item>LION</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_28">
+        <item>K_N_ _R_ _                 (จิงโจ้)</item>
+        <item>KANGAROO</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_29">
+        <item>E_E_ _ _NT                (ช้าง)</item>
+        <item>ELEPHANT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions_30">
+        <item>G_ _A_ _E                   (ยีราฟ)</item>
+        <item>GIRAFFE</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_31">
+        <item>C_M_L                        (อูฐ)</item>
+        <item>CAMEL</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_32">
+        <item>_I_ _R                         (เสือ)</item>
+        <item>TIGER</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_33">
+        <item>F_ _H                          (ปลา)</item>
+        <item>FISH</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_34">
+        <item>B_ _T_ _F_Y             (ผีเสื้อ)</item>
+        <item>BUTTERFLY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_35">
+        <item>B_E                            (ผึ้ง)</item>
+        <item>BEE</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_36">
+        <item>_O_SE                        (ม้า)</item>
+        <item>HORSE</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_37">
+        <item>G_A_                          (แพะ)</item>
+        <item>GOAT</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_38">
+        <item>M_ _K_Y                   (ลิง)</item>
+        <item>MONKEY</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_39">
+        <item>_ _ W                         (วัว)</item>
+        <item>COW</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_40">
+        <item>T _ _ T_E                  (เต่า)</item>
+        <item>TURTLE</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_41">
+        <item>_E_R                          (หมี)</item>
+        <item>BEAR</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_42">
+        <item>P_G                            (หมู)</item>
+        <item>PIG</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_43">
+        <item>F_O_                          (กบ)</item>
+        <item>FROG</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_44">
+        <item>_O_PH_ _                  (โลมา)</item>
+        <item>DOLPHIN</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_45">
+        <item>S_ AR_                       (ฉลาม)</item>
+        <item>SHARK</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_46">
+        <item>_E_GU_ _                  (เพนกวิน)</item>
+        <item>PENGUIN</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_47">
+        <item>_U_FA_ _                  (ควาย)</item>
+        <item>BUFFALO</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_48">
+        <item>S_ _KE                       (งู)</item>
+        <item>SNAKE</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_49">
+        <item>H_ _P_P_ _A_ _S     (ฮิปโปฯ)</item>
+        <item>HIPPOPOTAMUS</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions_50">
+        <item>R_B_I_                      (กระต่าย)</item>
+        <item>RABBIT</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_51">
+        <item>_A_ _N                      (อ่างล้างหน้า)</item>
+        <item>BASIN</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_52">
+        <item>F_ _C_ _                    (ก๊อกน้ำ)</item>
+        <item>FAUCET</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_53">
+        <item>_ _A_ _ _O                (แชมพู)</item>
+        <item>SHAMPOO</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_54">
+        <item>S_ _P                          (สบู่)</item>
+        <item>SOAP</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_55">
+        <item>_ _O_G_                    (ฟองน้ำ)</item>
+        <item>SPONGE</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_56">
+        <item>_O_ _R                      (ผ้าขนหนู)</item>
+        <item>TOWER</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_57">
+        <item>C_M_                        (หวี)</item>
+        <item>COMB</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_58">
+        <item>_I_R_ _                     (กระจก)</item>
+        <item>MIRROR</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Questions_59">
+        <item>C_ _ _R                    (เก้าอี้)</item>
+        <item>CHAIR</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_60">
+        <item>_A_                           (แฟน)</item>
+        <item>FAN</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_61">
+        <item>P_ _T_ _E                (รูปภาพ)</item>
+        <item>PICTURE</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions_62">
+        <item>_ _D_O                    (วิทยุ)</item>
+        <item>RADIO</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_63">
+        <item>T_ _E_ _ _N_         (โทรศัพท์)</item>
+        <item>TELEPHONE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions_64">
+        <item>M_ _L                      (นม)</item>
+        <item>MILK</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_65">
+        <item>_A_                          (กะทะ)</item>
+        <item>PAN</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_66">
+        <item>C_ _                         (ถ้วย)</item>
+        <item>CUP</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="Questions_67">
+        <item>S_ _O_                    (ช้อน)</item>
+        <item>SPOON</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_68">
+        <item>F_ _K                      (ส้อม)</item>
+        <item>FORK</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Questions_69">
+        <item>_ _I_E                     (มีด)</item>
+        <item>KNIFE</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="Questions_70">
+        <item>_I_ _O_ _ _E         (ไมโครเวฟ)</item>
+        <item>MICROWAVE</item>
+        <item>9</item>
+    </string-array>
+</resources>
