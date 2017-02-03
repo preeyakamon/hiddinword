@@ -1,8 +1,12 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +26,7 @@ public class play extends ActionBarActivity {
     private String[] Quest, Ans, len_ans;
     private Random rndQuest = new Random();
     private int[] timeInts = new int[]{300, 240, 180};
+    private boolean aBoolean = true;
 
 
     @Override
@@ -46,7 +51,60 @@ public class play extends ActionBarActivity {
         //หมายถึง Index ของคำถาม
         Quest_Item = rndQuest.nextInt(250) + 1;
         Screen_Refresh();
+
+        myLoop();
+
     }   // Main Method
+
+    private void myLoop() {
+
+        if (aBoolean) {
+            //Do it
+            timeInts[intIndex] -= 1;
+            timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
+
+
+
+            //Delay
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (timeInts[intIndex] == 0) {
+                        aBoolean = false;
+                        myAlertPlay();
+                    } else {
+                        myLoop();
+                    }
+                }   // run
+            }, 1000);
+
+
+        }   //if
+
+    }   // myLoop
+
+    private void myAlertPlay() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.icon1);
+        builder.setTitle("หมดเวลา");
+        builder.setMessage("เล่นใหม่ หมดเวลาคะ");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Intent intent = getIntent();
+                intent.putExtra("Index", intIndex);
+                finish();
+                startActivity(intent);
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
+    }
 
     public void onClickTex(View view) {
         switch (view.getId()) {
@@ -207,14 +265,28 @@ public class play extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        MainActivity.SoundMusic.pause();
-    }
+        try {
+
+            MainActivity.SoundMusic.pause();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }   // onPause
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (MainActivity.SoundPlaying) {
-            MainActivity.SoundMusic.start();
+
+        try {
+
+            if (MainActivity.SoundPlaying) {
+                MainActivity.SoundMusic.start();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }
+
+    }   // onResume
 }
