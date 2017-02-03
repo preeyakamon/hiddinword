@@ -1,10 +1,14 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,14 +18,14 @@ import java.util.Random;
 
 public class TestLevel extends ActionBarActivity {
 
-    MediaPlayer soundRadio;
+    //Explicit
+    private MediaPlayer soundRadio;
+    private TextView txtAnswer, txtQuestion, timeTextView;
+    private TypedArray arrQuest;
+    private int Quest_Item, timeAnInt = 60, scoreAnInt = 0;
+    private String[] Quest, Ans, len_ans;
+    private boolean aBoolean = true;
 
-
-    TextView txtAnswer, txtQuestion, timeTextView;
-    TypedArray arrQuest;
-    int Quest_Item, timeAnInt = 60;
-    String[] Quest, Ans, len_ans;
-    boolean aBoolean = true;
 
 
     Random rndQuest = new Random();
@@ -58,6 +62,26 @@ public class TestLevel extends ActionBarActivity {
                 public void run() {
                     if (timeAnInt == 0) {
                         aBoolean = false;
+
+                        int i = 0;
+                        if (scoreAnInt > 6) {
+                            i = 2;
+                        } else if (scoreAnInt > 3) {
+                            i = 1;
+                        } else {
+                            i = 0;
+                        }
+
+
+//                        MyAlert myAlert = new MyAlert(TestLevel.this);
+//                        myAlert.myDialogmaster(R.drawable.icon1, "Your Score",
+//                                "Score = " + Integer.toString(scoreAnInt) + "\n" +
+//                                        "Your Level " + Integer.toString(i + 1),
+//                                play.class,
+//                                i);
+
+                        myDialogmaster(i);
+
                     } else {
                         timeAnInt -= 1;
                         myLoop();
@@ -68,6 +92,29 @@ public class TestLevel extends ActionBarActivity {
         }   // if
 
     }   // myLoop
+
+    private void myDialogmaster(final int index) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.icon1);
+        builder.setTitle("Score");
+        builder.setMessage("Score = " + Integer.toString(scoreAnInt) + "\n" + "Your Level = " + Integer.toString(index + 1));
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Intent intent = new Intent(TestLevel.this, play.class);
+                intent.putExtra("Index", index);
+                startActivity(intent);
+
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
+
+    }   // myDialot
 
     public void onClickTex(View view) {
         switch (view.getId()) {
@@ -149,7 +196,7 @@ public class TestLevel extends ActionBarActivity {
             case R.id.btnZ:
                 txtAnswer.append("Z");
                 break;
-        }
+        }   // switch
 
         int len1 = String.valueOf(txtAnswer.getText()).length();
         int len2 = Integer.valueOf(len_ans[Quest_Item - 1]);
@@ -158,6 +205,9 @@ public class TestLevel extends ActionBarActivity {
             String txt2 = Ans[Quest_Item - 1];
             if (txt1.equals(txt2)) {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
+
+                scoreAnInt += 1;
+                Log.d("3febV1", "Score ==> " + scoreAnInt);
 
                 soundRadio = MediaPlayer.create(getBaseContext(), R.raw.jetsons1);
                 soundRadio.start();
@@ -217,14 +267,14 @@ public class TestLevel extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        MainActivity.SoundMusic.pause();
+        //MainActivity.SoundMusic.pause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (MainActivity.SoundPlaying) {
-            MainActivity.SoundMusic.start();
-        }
+//        if (MainActivity.SoundPlaying) {
+//            MainActivity.SoundMusic.start();
+//        }
     }
 }
