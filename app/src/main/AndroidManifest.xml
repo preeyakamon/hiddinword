@@ -21,7 +21,8 @@
             android:name=".play"
             android:label="@string/title_activity_play" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignUp" />
+        <activity android:name=".TestLevel"></activity>
     </application>
 
 </manifest>

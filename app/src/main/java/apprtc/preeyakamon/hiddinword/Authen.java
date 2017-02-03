@@ -102,7 +102,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
                     getResources().getString(R.string.message_passFalse));
         } else {
             Toast.makeText(Authen.this, "Welcome " + loginStrings[1], Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Authen.this, play.class);
+            Intent intent = new Intent(Authen.this, TestLevel.class);
             startActivity(intent);
         }
 
