@@ -38,7 +38,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
     }   // Main Method
 
-    //คือการ เก็บ event จากการคลิก ปุ่ม
+    //คือการ เก็บ event จากการคลิก ปุ่ม Master
     private void buttonController() {
 
         signInButton.setOnClickListener(Authen.this);
