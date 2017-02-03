@@ -22,7 +22,7 @@ public class play extends ActionBarActivity {
     private MediaPlayer soundRadio;
     private TextView txtAnswer, txtQuestion, levelTextView, timeTextView;
     private TypedArray arrQuest;
-    private int Quest_Item, intIndex, timeAnInt;
+    private int Quest_Item, intIndex, scoreAnInt = 0;
     private String[] Quest, Ans, len_ans;
     private Random rndQuest = new Random();
     private int[] timeInts = new int[]{300, 240, 180};
@@ -70,12 +70,20 @@ public class play extends ActionBarActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    if (timeInts[intIndex] == 0) {
+
+                    try {
+
+                        if (timeInts[intIndex] == 0) {
+                            aBoolean = false;
+                            myAlertPlay("หมดเวลา", "เล่นใหม่ หมดเวลาคะ");
+                        } else {
+                            myLoop();
+                        }
+
+                    } catch (Exception e) {
                         aBoolean = false;
-                        myAlertPlay();
-                    } else {
-                        myLoop();
                     }
+
                 }   // run
             }, 1000);
 
@@ -84,13 +92,13 @@ public class play extends ActionBarActivity {
 
     }   // myLoop
 
-    private void myAlertPlay() {
+    private void myAlertPlay(String strTitle, String strMessage) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setIcon(R.drawable.icon1);
-        builder.setTitle("หมดเวลา");
-        builder.setMessage("เล่นใหม่ หมดเวลาคะ");
+        builder.setTitle(strTitle);
+        builder.setMessage(strMessage);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -195,6 +203,23 @@ public class play extends ActionBarActivity {
             String txt2 = Ans[Quest_Item - 1];
             if (txt1.equals(txt2)) {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
+
+               int[] ints = new int[]{20, 30, 40};
+             //   int[] ints = new int[]{2, 3, 4};
+
+                scoreAnInt += 1;
+                if (scoreAnInt == ints[intIndex]) {
+
+                    if (intIndex == 2) {
+                        Intent intent = new Intent(play.this, Success.class);
+                        startActivity(intent);
+                    }   // if
+
+                    intIndex += 1;
+                    myAlertPlay("ผ่านด่านแล้ว", "ยินดีด้วย ผ่านด่านแล้ว");
+
+
+                }   // if
 
                 soundRadio = MediaPlayer.create(getBaseContext(), R.raw.jetsons1);
                 soundRadio.start();
