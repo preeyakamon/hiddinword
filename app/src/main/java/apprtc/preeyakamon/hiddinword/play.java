@@ -157,6 +157,7 @@ public class play extends ActionBarActivity {
         soundRadio.start();
         //เสียงปุ่มตัวอักษร
     }
+
     public void onClickClear(View view) {
         txtAnswer.setText("");
 
@@ -176,6 +177,7 @@ public class play extends ActionBarActivity {
 
     }
     private void Read_Question(){
+
         for (int i=0; i<250; i++){
             String quest_tag="Questions_"+String.valueOf(i+1);
             int resQuest = getResources().getIdentifier(quest_tag,"array",getPackageName());

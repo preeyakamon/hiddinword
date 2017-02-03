@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="Questions_1">
         <item>S_ _ _ M _ _ _                (ว่ายน้ำ)</item>
         <item>SWIMMING</item>
@@ -50,6 +51,9 @@
         <item>GYMNASTICS</item>
         <item>10</item>
     </string-array>
+
+
+
     <string-array name="Questions_11">
         <item>S_ _ O_ _ N_                  (ยิงปืน)</item>
         <item>SHOOTING</item>

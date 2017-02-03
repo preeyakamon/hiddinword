@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Questions1_1">
+        <item>S_ _ _ M _ _ _                (ว่ายน้ำ)</item>
+        <item>SWIMMING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions1_2">
+        <item>_ A _ _ E _ B _ _ _           (บาสเก็ตบอล)</item>
+        <item>BASKETBALL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions1_3">
+        <item>B _ _ M I _ _ _ _             (แบดมินตัน)</item>
+        <item>BADMINTON</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions1_4">
+        <item>_ _O _ _ A _ L                (ฟุตบอล)</item>
+        <item>FOOTBALL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions1_5">
+        <item>V _ _ L _ _ B _ _ _           (วอลเลย์บอล)</item>
+        <item>VOLLEYBALL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions1_6">
+        <item>_ _ W _ I _ G                 (โบว์ลิ่ง)</item>
+        <item>BOWLING</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="Questions1_7">
+        <item>T_E_W_ _ _O         	(เทควันโด)</item>
+        <item>TAEKWONDO</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions1_8">
+        <item>_ _I_H_ _ _F_ _ _G   	        (ยกน้ำหนัก)</item>
+        <item>WEIGHTLIFTING</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions1_9">
+        <item>YA _ _ T_N_                   (เรือใบ)</item>
+        <item>YACHTING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions1_10">
+        <item>_Y_ _A _ _ _C_               	(ยิมนาสติก)</item>
+        <item>GYMNASTICS</item>
+        <item>10</item>
+    </string-array>
+
+
+</resources>
