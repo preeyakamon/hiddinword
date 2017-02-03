@@ -1,14 +1,18 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.Random;
 
 
@@ -16,13 +20,13 @@ public class play extends ActionBarActivity {
 
     //Explicit
     private MediaPlayer soundRadio;
-    private TextView txtAnswer,txtQuestion, levelTextView, timeTextView;
+    private TextView txtAnswer, txtQuestion, levelTextView, timeTextView;
     private TypedArray arrQuest;
     private int Quest_Item, intIndex, timeAnInt;
-    private String[] Quest,Ans,len_ans;
+    private String[] Quest, Ans, len_ans;
     private Random rndQuest = new Random();
     private int[] timeInts = new int[]{300, 240, 180};
-
+    private boolean aBoolean = true;
 
 
     @Override
@@ -47,7 +51,60 @@ public class play extends ActionBarActivity {
         //หมายถึง Index ของคำถาม
         Quest_Item = rndQuest.nextInt(250) + 1;
         Screen_Refresh();
+
+        myLoop();
+
     }   // Main Method
+
+    private void myLoop() {
+
+        if (aBoolean) {
+            //Do it
+            timeInts[intIndex] -= 1;
+            timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
+
+
+
+            //Delay
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (timeInts[intIndex] == 0) {
+                        aBoolean = false;
+                        myAlertPlay();
+                    } else {
+                        myLoop();
+                    }
+                }   // run
+            }, 1000);
+
+
+        }   //if
+
+    }   // myLoop
+
+    private void myAlertPlay() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.icon1);
+        builder.setTitle("หมดเวลา");
+        builder.setMessage("เล่นใหม่ หมดเวลาคะ");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Intent intent = getIntent();
+                intent.putExtra("Index", intIndex);
+                finish();
+                startActivity(intent);
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
+    }
 
     public void onClickTex(View view) {
         switch (view.getId()) {
@@ -132,28 +189,28 @@ public class play extends ActionBarActivity {
         }
 
         int len1 = String.valueOf(txtAnswer.getText()).length();
-        int len2 = Integer.valueOf(len_ans[Quest_Item-1]);
+        int len2 = Integer.valueOf(len_ans[Quest_Item - 1]);
         if (len1 == len2) {
             String txt1 = String.valueOf(txtAnswer.getText());
-            String txt2 = Ans[Quest_Item-1];
+            String txt2 = Ans[Quest_Item - 1];
             if (txt1.equals(txt2)) {
-                Toast.makeText(getApplicationContext(),"ถูกต้องแล้วค่ะ"+txt1,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
 
-                soundRadio = MediaPlayer.create(getBaseContext(),R.raw.jetsons1);
+                soundRadio = MediaPlayer.create(getBaseContext(), R.raw.jetsons1);
                 soundRadio.start();
                 //เสียงเวลาถูก
 
-                Quest_Item = rndQuest.nextInt(250)+1;
-                Screen_Refresh(); }
-            else {
-                Toast.makeText(getApplicationContext(),"ลองคิดใหม่นะค่ะ",Toast.LENGTH_LONG).show();
+                Quest_Item = rndQuest.nextInt(250) + 1;
+                Screen_Refresh();
+            } else {
+                Toast.makeText(getApplicationContext(), "ลองคิดใหม่นะค่ะ", Toast.LENGTH_LONG).show();
 
-                soundRadio = MediaPlayer.create(getBaseContext(),R.raw.a_boing);
+                soundRadio = MediaPlayer.create(getBaseContext(), R.raw.a_boing);
                 soundRadio.start();
                 //เสียงเวลาผิด
             }
         }
-        soundRadio = MediaPlayer.create(getBaseContext(),R.raw.corkpop2);
+        soundRadio = MediaPlayer.create(getBaseContext(), R.raw.corkpop2);
         soundRadio.start();
         //เสียงปุ่มตัวอักษร
     }
@@ -161,26 +218,31 @@ public class play extends ActionBarActivity {
     public void onClickClear(View view) {
         txtAnswer.setText("");
 
-        soundRadio = MediaPlayer.create(getBaseContext(),R.raw.bloop22);
+        soundRadio = MediaPlayer.create(getBaseContext(), R.raw.bloop22);
         soundRadio.start();
         //เสียงปุ่มcl
 
     }
 
     private void init_view() {
-        txtQuestion = (TextView)findViewById(R.id.txtQuest_p);
-        txtAnswer = (TextView)findViewById(R.id.txtAns_p);
+        txtQuestion = (TextView) findViewById(R.id.txtQuest_p);
+        txtAnswer = (TextView) findViewById(R.id.txtAns_p);
 
         Quest = new String[250];
         Ans = new String[250];
         len_ans = new String[250];
 
-    }
-    private void Read_Question(){
 
-        for (int i=0; i<250; i++){
-            String quest_tag="Questions_"+String.valueOf(i+1);
-            int resQuest = getResources().getIdentifier(quest_tag,"array",getPackageName());
+    }
+
+    private void Read_Question() {
+
+//        String[] myQuestionStrings = new String[]{"Questions_", "Questions1_", "Questions2_"};
+        String[] myQuestionStrings = new String[]{"Questions_", "Questions_", "Questions_"};
+
+        for (int i = 0; i < Quest.length; i++) {
+            String quest_tag = myQuestionStrings[intIndex] + String.valueOf(i + 1);
+            int resQuest = getResources().getIdentifier(quest_tag, "array", getPackageName());
             arrQuest = getResources().obtainTypedArray(resQuest);
 
             Quest[i] = String.valueOf(arrQuest.getString(0));
@@ -188,26 +250,43 @@ public class play extends ActionBarActivity {
             len_ans[i] = String.valueOf(arrQuest.getString(2));
         }
     }
-    private void Screen_Refresh(){
+
+    private void Screen_Refresh() {
         try {
 
-            txtQuestion.setText(Quest[Quest_Item-1]);
+            txtQuestion.setText(Quest[Quest_Item - 1]);
             txtAnswer.setText("");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     @Override
     protected void onPause() {
         super.onPause();
-        MainActivity.SoundMusic.pause();
-    }
+        try {
+
+            MainActivity.SoundMusic.pause();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }   // onPause
+
     @Override
     protected void onResume() {
         super.onResume();
-        if (MainActivity.SoundPlaying) {
-            MainActivity.SoundMusic.start();
+
+        try {
+
+            if (MainActivity.SoundPlaying) {
+                MainActivity.SoundMusic.start();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    }
+
+    }   // onResume
 }
