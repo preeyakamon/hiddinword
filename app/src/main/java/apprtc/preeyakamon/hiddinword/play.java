@@ -4,6 +4,7 @@ import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,16 +14,14 @@ import java.util.Random;
 
 public class play extends ActionBarActivity {
 
-    MediaPlayer soundRadio;
-
-
-
-    TextView txtAnswer,txtQuestion;
-    TypedArray arrQuest;
-    int Quest_Item;
-    String[] Quest,Ans,len_ans;
-
-    Random rndQuest = new Random();
+    //Explicit
+    private MediaPlayer soundRadio;
+    private TextView txtAnswer,txtQuestion, levelTextView, timeTextView;
+    private TypedArray arrQuest;
+    private int Quest_Item, intIndex, timeAnInt;
+    private String[] Quest,Ans,len_ans;
+    private Random rndQuest = new Random();
+    private int[] timeInts = new int[]{300, 240, 180};
 
 
 
@@ -30,6 +29,17 @@ public class play extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+
+        levelTextView = (TextView) findViewById(R.id.textView7);
+        timeTextView = (TextView) findViewById(R.id.textView6);
+
+
+        intIndex = getIntent().getIntExtra("Index", 0);
+        Log.d("3febV1", "Index ที่รับมา ==> " + intIndex);
+
+        //Show TextView
+        levelTextView.setText("Level " + Integer.toString(intIndex + 1));
+        timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
 
         init_view();
         Read_Question();
@@ -41,82 +51,82 @@ public class play extends ActionBarActivity {
 
     public void onClickTex(View view) {
         switch (view.getId()) {
-            case R.id.btnA:
+            case R.id.btnA_p:
                 txtAnswer.append("A");
                 break;
-            case R.id.btnB:
+            case R.id.btnB_p:
                 txtAnswer.append("B");
                 break;
-            case R.id.btnC:
+            case R.id.btnC_p:
                 txtAnswer.append("C");
                 break;
-            case R.id.btnD:
+            case R.id.btnD_p:
                 txtAnswer.append("D");
                 break;
-            case R.id.btnE:
+            case R.id.btnE_p:
                 txtAnswer.append("E");
                 break;
-            case R.id.btnF:
+            case R.id.btnF_p:
                 txtAnswer.append("F");
                 break;
-            case R.id.btnG:
+            case R.id.btnG_p:
                 txtAnswer.append("G");
                 break;
-            case R.id.btnH:
+            case R.id.btnH_p:
                 txtAnswer.append("H");
                 break;
-            case R.id.btnI:
+            case R.id.btnI_p:
                 txtAnswer.append("I");
                 break;
-            case R.id.btnJ:
+            case R.id.btnJ_p:
                 txtAnswer.append("J");
                 break;
-            case R.id.btnK:
+            case R.id.btnK_p:
                 txtAnswer.append("K");
                 break;
-            case R.id.btnL:
+            case R.id.btnL_p:
                 txtAnswer.append("L");
                 break;
-            case R.id.btnM:
+            case R.id.btnM_p:
                 txtAnswer.append("M");
                 break;
-            case R.id.btnN:
+            case R.id.btnN_p:
                 txtAnswer.append("N");
                 break;
-            case R.id.btnO:
+            case R.id.btnO_p:
                 txtAnswer.append("O");
                 break;
-            case R.id.btnP:
+            case R.id.btnP_p:
                 txtAnswer.append("P");
                 break;
-            case R.id.btnQ:
+            case R.id.btnQ_p:
                 txtAnswer.append("Q");
                 break;
-            case R.id.btnR:
+            case R.id.btnR_p:
                 txtAnswer.append("R");
                 break;
-            case R.id.btnS:
+            case R.id.btnS_p:
                 txtAnswer.append("S");
                 break;
-            case R.id.btnT:
+            case R.id.btnT_p:
                 txtAnswer.append("T");
                 break;
-            case R.id.btnU:
+            case R.id.btnU_p:
                 txtAnswer.append("U");
                 break;
-            case R.id.btnV:
+            case R.id.btnV_p:
                 txtAnswer.append("V");
                 break;
-            case R.id.btnW:
+            case R.id.btnW_p:
                 txtAnswer.append("W");
                 break;
-            case R.id.btnX:
+            case R.id.btnX_p:
                 txtAnswer.append("X");
                 break;
-            case R.id.btnY:
+            case R.id.btnY_p:
                 txtAnswer.append("Y");
                 break;
-            case R.id.btnZ:
+            case R.id.btnZ_p:
                 txtAnswer.append("Z");
                 break;
         }
@@ -157,8 +167,8 @@ public class play extends ActionBarActivity {
     }
 
     private void init_view() {
-        txtQuestion = (TextView)findViewById(R.id.txtQuest);
-        txtAnswer = (TextView)findViewById(R.id.txtAns);
+        txtQuestion = (TextView)findViewById(R.id.txtQuest_p);
+        txtAnswer = (TextView)findViewById(R.id.txtAns_p);
 
         Quest = new String[250];
         Ans = new String[250];
