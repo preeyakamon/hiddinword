@@ -224,8 +224,8 @@ public class play extends ActionBarActivity {
             if (txt1.equals(txt2)) {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
 
-               int[] ints = new int[]{20, 30, 40};
-             //   int[] ints = new int[]{2, 3, 4};
+             //  int[] ints = new int[]{20, 30, 40};
+                int[] ints = new int[]{2, 3, 4};
 
                 scoreAnInt += 1;
                 if (scoreAnInt == ints[intIndex]) {
