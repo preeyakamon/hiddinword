@@ -21,6 +21,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
     private MyAlert myAlert;
     private String tag = "6janV1";
     private String[] loginStrings = new String[4];
+    private int indexAnInt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,12 +103,48 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
                     getResources().getString(R.string.message_passFalse));
         } else {
             Toast.makeText(Authen.this, "Welcome " + loginStrings[1], Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Authen.this, TestLevel.class);
-            startActivity(intent);
+            Log.d("3febV2", "resuft ==> " + userCheckLevel());
+
+            if (userCheckLevel()) {
+                //No Data
+                Intent intent = new Intent(Authen.this, TestLevel.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(Authen.this, play.class);
+                startActivity(intent);
+            }
+
+
         }
 
 
     }   // checkSignIn
+
+    private boolean userCheckLevel() {
+
+        boolean result = false;
+
+        try {
+
+            SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                    MODE_PRIVATE, null);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM playTABLE", null);
+            cursor.moveToFirst();
+
+            if (cursor.getCount() == 0) {
+                return result = true;    // ฺไม่มีข้อมูล
+            } else {
+                return result =false;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }   // userCheck
+
+
 
     private boolean checkUser() {
 
