@@ -49,4 +49,20 @@ public class MyManage {
         return sqLiteDatabase.insert(user_table, null, contentValues);
     }
 
+
+    public long addValueToPlay(String stridUSER,
+                               String strLevel,
+                               String strScore,
+                               String strDateTime) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(column_idUser, stridUSER);
+        contentValues.put(column_level, strLevel);
+        contentValues.put(column_score, strScore);
+        contentValues.put(column_date, strDateTime);
+
+        return sqLiteDatabase.insert(play_table, null, contentValues);
+    }
+
+
 }   // Main Class

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Random;
 
 
@@ -104,6 +105,8 @@ public class TestLevel extends ActionBarActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
+                addLevelToSQLite(index);
+
                 Intent intent = new Intent(TestLevel.this, play.class);
                 intent.putExtra("Index", index);
                 startActivity(intent);
@@ -115,6 +118,15 @@ public class TestLevel extends ActionBarActivity {
 
 
     }   // myDialot
+
+    private void addLevelToSQLite(int index) {
+
+        Calendar calendar = Calendar.getInstance();
+
+        MyManage myManage = new MyManage(this);
+        myManage.addValueToPlay("1", Integer.toString(index), Integer.toString(scoreAnInt), calendar.getTime().toString());
+
+    }
 
     public void onClickTex(View view) {
         switch (view.getId()) {

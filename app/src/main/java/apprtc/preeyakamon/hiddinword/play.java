@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,8 +40,8 @@ public class play extends ActionBarActivity {
         timeTextView = (TextView) findViewById(R.id.textView6);
 
 
-        intIndex = getIntent().getIntExtra("Index", 0);
-        Log.d("3febV1", "Index ที่รับมา ==> " + intIndex);
+        myFindIndex();
+
 
         //Show TextView
         levelTextView.setText("Level " + Integer.toString(intIndex + 1));
@@ -55,6 +57,24 @@ public class play extends ActionBarActivity {
         myLoop();
 
     }   // Main Method
+
+    private void myFindIndex() {
+
+        try {
+
+            SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                    MODE_PRIVATE, null);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM playTABLE", null);
+            cursor.moveToFirst();
+
+            intIndex = Integer.parseInt(cursor.getString(2));
+            Log.d("3febV1", "Index ที่รับมา ==> " + intIndex);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     private void myLoop() {
 
