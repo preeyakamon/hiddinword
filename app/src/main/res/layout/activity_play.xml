@@ -7,7 +7,7 @@
     tools:context="apprtc.preeyakamon.hiddinword.play"
     android:focusable="false"
     android:id="@+id/activity_play"
-    android:background="@drawable/game1">
+    android:background="@color/highlighted_text_material_dark">
 
     <FrameLayout
         android:layout_width="350dp"
@@ -23,7 +23,7 @@
             android:id="@+id/btnQ_p"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -34,7 +34,7 @@
             android:layout_marginLeft="50dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_marginLeft="100dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -56,7 +56,7 @@
             android:layout_marginLeft="200dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -67,7 +67,7 @@
             android:layout_marginLeft="250dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -79,7 +79,7 @@
             android:layout_marginTop="150dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -90,7 +90,7 @@
             android:layout_marginTop="50dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -102,7 +102,7 @@
             android:layout_marginLeft="50dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -114,7 +114,7 @@
             android:layout_marginLeft="100dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -126,7 +126,7 @@
             android:layout_marginLeft="150dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -138,19 +138,7 @@
             android:layout_marginLeft="200dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="D"
-            android:id="@+id/btnD_p"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -162,7 +150,7 @@
             android:layout_marginLeft="120dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -173,7 +161,7 @@
             android:layout_marginTop="100dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -185,7 +173,7 @@
             android:layout_marginLeft="50dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -197,7 +185,7 @@
             android:layout_marginLeft="100dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -209,7 +197,7 @@
             android:layout_marginLeft="150dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -221,7 +209,7 @@
             android:layout_marginLeft="200dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -233,7 +221,7 @@
             android:layout_marginLeft="250dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -245,7 +233,7 @@
             android:layout_marginLeft="170dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -257,7 +245,7 @@
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -269,7 +257,7 @@
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -281,7 +269,7 @@
             android:layout_marginLeft="220dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -293,19 +281,7 @@
             android:layout_marginLeft="70dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="M"
-            android:id="@+id/btnM_p"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="120dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -316,7 +292,7 @@
             android:layout_marginLeft="150dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickTex" />
 
         <Button
@@ -328,8 +304,32 @@
             android:layout_marginLeft="180dp"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:background="#ffffc2e8"
+            android:background="@color/abc_search_url_text_normal"
             android:onClick="onClickClear" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="D"
+            android:id="@+id/btnD_p"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="250dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="@color/abc_search_url_text_normal"
+            android:onClick="onClickTex" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="M"
+            android:id="@+id/btnM_p"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="120dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:background="@color/abc_search_url_text_normal"
+            android:onClick="onClickTex" />
 
     </FrameLayout>
 
@@ -339,7 +339,7 @@
         android:id="@+id/txtAns_p"
         android:layout_marginTop="210dp"
         android:layout_marginLeft="50dp"
-        android:background="#ffeeffb4"
+        android:background="?android:attr/colorBackground"
         style="@style/Base.TextAppearance.AppCompat.Large"
         android:gravity="center_horizontal" />
 
@@ -354,7 +354,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:gravity="center_vertical|center_horizontal"
-        android:background="#ffffbea5" />
+        android:background="@color/common_google_signin_btn_text_dark_disabled" />
 
     <TextView
         android:text="300 Sec"
