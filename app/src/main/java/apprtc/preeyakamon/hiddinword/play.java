@@ -176,8 +176,14 @@ public class play extends ActionBarActivity {
         }
     }
     private void Screen_Refresh(){
-        txtQuestion.setText(Quest[Quest_Item-1]);
-        txtAnswer.setText("");
+        try {
+
+            txtQuestion.setText(Quest[Quest_Item-1]);
+            txtAnswer.setText("");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @Override
     protected void onPause() {
