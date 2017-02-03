@@ -22,7 +22,8 @@
             android:label="@string/title_activity_play" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
-        <activity android:name=".TestLevel"></activity>
+        <activity android:name=".TestLevel" />
+        <activity android:name=".Success"></activity>
     </application>
 
 </manifest>
