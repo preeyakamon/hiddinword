@@ -356,4 +356,13 @@
         android:gravity="center_vertical|center_horizontal"
         android:background="#ffffbea5" />
 
+    <TextView
+        android:text="60 Sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:layout_alignParentRight="true" />
+
 </RelativeLayout>
