@@ -108,7 +108,7 @@ public class TestLevel extends ActionBarActivity {
                 addLevelToSQLite(index);
 
                 Intent intent = new Intent(TestLevel.this, play.class);
-                intent.putExtra("Index", index +2 );
+                intent.putExtra("Index", index+1 );
                 startActivity(intent);
 
                 dialogInterface.dismiss();
