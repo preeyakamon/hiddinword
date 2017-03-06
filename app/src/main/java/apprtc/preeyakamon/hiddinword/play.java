@@ -1,8 +1,10 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -24,7 +26,7 @@ public class play extends ActionBarActivity {
     private MediaPlayer soundRadio;
     private TextView txtAnswer, txtQuestion, levelTextView, timeTextView;
     private TypedArray arrQuest;
-    private int Quest_Item, intIndex, scoreAnInt = 0;
+    private int Quest_Item, intIndex = 0, scoreAnInt = 0;
     private String[] Quest, Ans, len_ans;
     private Random rndQuest = new Random();
     private int[] timeInts = new int[]{300, 240, 180};
@@ -40,12 +42,20 @@ public class play extends ActionBarActivity {
         timeTextView = (TextView) findViewById(R.id.textView6);
 
 
-        myFindIndex();
+        intIndex = myFindIndex() - 1;
 
 
         //Show TextView
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            intIndex = bundle.getInt("Index", 0);
+            intIndex -= 1;
+        }
         levelTextView.setText("Level " + Integer.toString(intIndex + 1));
         timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
+
+        // Update playTABLE ส่ง intIndex + 1 เข้าไปอัพเดท
+        updatePlayTable(intIndex + 1);
 
         init_view();
         Read_Question();
@@ -58,22 +68,25 @@ public class play extends ActionBarActivity {
 
     }   // Main Method
 
-    private void myFindIndex() {
+    private int myFindIndex() {
 
         try {
 
             SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                     MODE_PRIVATE, null);
-            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM playTABLE", null);
+            SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+            String rawQuery = String.format("SELECT * FROM playTABLE WHERE idUser = \"%s\"",
+                    spf.getString("idUser", ""));
+            Cursor cursor = sqLiteDatabase.rawQuery(rawQuery, null);
             cursor.moveToFirst();
+            Log.d("Test", ""+Integer.parseInt(cursor.getString(2)));
+            return Integer.parseInt(cursor.getString(2));
 
-            intIndex = Integer.parseInt(cursor.getString(2));
-            Log.d("3febV1", "Index ที่รับมา ==> " + intIndex);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return 0;
     }
 
     private void myLoop() {
@@ -112,7 +125,7 @@ public class play extends ActionBarActivity {
 
     }   // myLoop
 
-    private void myAlertPlay(String strTitle, String strMessage) {
+    private void myAlertPlay(final String strTitle, String strMessage) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
@@ -123,11 +136,13 @@ public class play extends ActionBarActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
+
+
                 Intent intent = getIntent();
-                intent.putExtra("Index", intIndex);
-                finish();
+                intent.putExtra("Index", "หมดเวลา".equalsIgnoreCase(strTitle) ? intIndex : intIndex + 1);
                 startActivity(intent);
                 dialogInterface.dismiss();
+                finish();
             }
         });
         builder.show();
@@ -222,7 +237,7 @@ public class play extends ActionBarActivity {
             String txt1 = String.valueOf(txtAnswer.getText());
             String txt2 = Ans[Quest_Item - 1];
             if (txt1.equals(txt2)) {
-                Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + txt1, Toast.LENGTH_LONG).show();
 
              //  int[] ints = new int[]{20, 30, 40};
                 int[] ints = new int[]{2, 3, 4};
@@ -334,4 +349,28 @@ public class play extends ActionBarActivity {
         }
 
     }   // onResume
+
+    public void updatePlayTable(int level) {
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                MODE_PRIVATE, null);
+        SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+        ContentValues data = new ContentValues();
+        data.put("Level", String.valueOf(level));
+        int updated = sqLiteDatabase.update("playTABLE", data, "idUser = '" + spf.getString("idUser", "") + "'", null);
+        //Log.d("TEST", "Updated : " + updated);
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Confirm for out of Application?");
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        alertDialog.setNegativeButton("Cancel", null);
+        alertDialog.show();
+    }
 }

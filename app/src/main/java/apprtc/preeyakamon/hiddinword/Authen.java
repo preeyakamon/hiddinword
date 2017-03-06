@@ -1,6 +1,7 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -34,8 +35,6 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
         bindWidget();
 
-        buttonController();
-
 
     }   // Main Method
 
@@ -55,6 +54,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
         userEditText = (EditText) findViewById(R.id.editText4);
         passwordEditText = (EditText) findViewById(R.id.editText5);
 
+        buttonController();
     }
 
     @Override
@@ -82,7 +82,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
         passwordString = passwordEditText.getText().toString().trim();
 
         //Check Space
-        if (userString.equals("") || passwordString.equals("")) {
+        if (userString.equalsIgnoreCase("") || passwordString.equalsIgnoreCase("")) {
             //Have Space
             myAlert.myDialog(R.drawable.icon2,
                     getResources().getString(R.string.title_haveSpace),
@@ -97,21 +97,28 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
             myAlert.myDialog(R.drawable.icon4,
                     getResources().getString(R.string.title_userFalse),
                     getResources().getString(R.string.message_userFalse));
-        } else if (!passwordString.equals(loginStrings[3])) {
+        } else if (!passwordString.equalsIgnoreCase(loginStrings[3])) {
             myAlert.myDialog(R.drawable.icon1,
                     getResources().getString(R.string.title_passFalse),
                     getResources().getString(R.string.message_passFalse));
         } else {
             Toast.makeText(Authen.this, "Welcome " + loginStrings[1], Toast.LENGTH_SHORT).show();
-            Log.d("3febV2", "resuft ==> " + userCheckLevel());
+            Log.d("3febV2", "result ==> " + userCheckLevel());
+
+            SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+            SharedPreferences.Editor editor = spf.edit();
+            editor.putString("idUser", userString);
+            editor.apply();
 
             if (userCheckLevel()) {
                 //No Data
                 Intent intent = new Intent(Authen.this, TestLevel.class);
                 startActivity(intent);
+                finish();
             } else {
                 Intent intent = new Intent(Authen.this, play.class);
                 startActivity(intent);
+                finish();
             }
 
 
@@ -128,13 +135,15 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
             SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                     MODE_PRIVATE, null);
-            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM playTABLE", null);
+            String rawQuery = String.format("SELECT * FROM playTABLE WHERE idUSER = \"%s\"",
+                    userString);
+            Cursor cursor = sqLiteDatabase.rawQuery(rawQuery, null);
             cursor.moveToFirst();
 
             if (cursor.getCount() == 0) {
-                return result = true;    // ฺไม่มีข้อมูล
+                return true;    // ฺไม่มีข้อมูล
             } else {
-                return result =false;
+                return false;
             }
 
         } catch (Exception e) {
@@ -148,12 +157,17 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
     private boolean checkUser() {
 
-        boolean result = true;
+        boolean result;
+        final String rawQuery = String.format("SELECT * FROM userTABLE WHERE %s = \"%s\" and %s = \"%s\"",
+                MyManage.column_user,
+                userString,
+                MyManage.column_pass,
+                passwordString);
 
         SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                 MODE_PRIVATE, null);
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM userTABLE", null);
-        cursor.moveToFirst();
+        Cursor cursor = sqLiteDatabase.rawQuery(rawQuery, null);
+        result = cursor.moveToFirst();
         for (int i = 0; i < cursor.getCount(); i++) {
 
             if (userString.equals(cursor.getString(cursor.getColumnIndex(MyManage.column_user)))) {
@@ -166,7 +180,7 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
             cursor.moveToNext();
         }   //for
-
+        if (cursor != null) cursor.close();
 
         return result;
     }

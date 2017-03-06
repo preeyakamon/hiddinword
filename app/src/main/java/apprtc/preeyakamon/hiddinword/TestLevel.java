@@ -3,6 +3,7 @@ package apprtc.preeyakamon.hiddinword;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -26,7 +27,6 @@ public class TestLevel extends ActionBarActivity {
     private int Quest_Item, timeAnInt = 60, scoreAnInt = 0;
     private String[] Quest, Ans, len_ans;
     private boolean aBoolean = true;
-
 
 
     Random rndQuest = new Random();
@@ -53,7 +53,7 @@ public class TestLevel extends ActionBarActivity {
 
         if (aBoolean) {
 
-            //Doit
+            //Do it
             timeTextView.setText(Integer.toString(timeAnInt) + " Sec");
 
 
@@ -64,15 +64,14 @@ public class TestLevel extends ActionBarActivity {
                     if (timeAnInt == 0) {
                         aBoolean = false;
 
-                        int i = 0;
+                        int i = 0; // 0 test level
                         if (scoreAnInt > 6) {
-                            i = 2;
+                            i = 3;
                         } else if (scoreAnInt > 3) {
-                            i = 1;
+                            i = 2;
                         } else {
-                            i = 0;
+                            i = 1;
                         }
-
 
 //                        MyAlert myAlert = new MyAlert(TestLevel.this);
 //                        myAlert.myDialogmaster(R.drawable.icon1, "Your Score",
@@ -94,21 +93,21 @@ public class TestLevel extends ActionBarActivity {
 
     }   // myLoop
 
-    private void myDialogmaster(final int index) {
+    private void myDialogmaster(final int level) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setIcon(R.drawable.icon1);
         builder.setTitle("Score");
-        builder.setMessage("Score = " + Integer.toString(scoreAnInt) + "\n" + "Your Level = " + Integer.toString(index + 1));
+        builder.setMessage("Score = " + Integer.toString(scoreAnInt) + "\n" + "Your Level = " + Integer.toString(level));
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                addLevelToSQLite(index);
+                addLevelToSQLite(level);
 
                 Intent intent = new Intent(TestLevel.this, play.class);
-                intent.putExtra("Index", index+1 );
+                intent.putExtra("Index", level);
                 startActivity(intent);
 
                 dialogInterface.dismiss();
@@ -119,12 +118,14 @@ public class TestLevel extends ActionBarActivity {
 
     }   // myDialot
 
-    private void addLevelToSQLite(int index) {
-
+    private void addLevelToSQLite(int level) {
+        // level : 1 , 2 , 3
         Calendar calendar = Calendar.getInstance();
 
         MyManage myManage = new MyManage(this);
-        myManage.addValueToPlay("1", Integer.toString(index), Integer.toString(scoreAnInt), calendar.getTime().toString());
+        SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+        String idUser = spf.getString("idUser", "");
+        myManage.addValueToPlay(idUser, Integer.toString(level), Integer.toString(scoreAnInt), calendar.getTime().toString());
 
     }
 
