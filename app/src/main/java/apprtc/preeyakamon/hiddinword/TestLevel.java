@@ -290,4 +290,17 @@ public class TestLevel extends ActionBarActivity {
 //            MainActivity.SoundMusic.start();
 //        }
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        alertDialog.setNegativeButton("Cancel", null);
+        alertDialog.show();
+    }
 }

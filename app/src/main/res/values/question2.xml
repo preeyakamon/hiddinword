@@ -2,54 +2,1256 @@
 <resources>
 
     <string-array name="Questions2_1">
-        <item>S_ _ _ M _ _ _                (ว่ายน้ำ)</item>
-        <item>SWIMMING</item>
-        <item>8</item>
+        <item>_ _C_ _T_ _ _                (แผนกต้อนรับ)</item>
+        <item>RECEPTION</item>
+        <item>9</item>
     </string-array>
     <string-array name="Questions2_2">
-        <item>_ A _ _ E _ B _ _ _           (บาสเก็ตบอล)</item>
-        <item>BASKETBALL</item>
-        <item>10</item>
+        <item>E_ _ _ _ _ _ _           (หลักฐาน)</item>
+        <item>EVIDENCE</item>
+        <item>8</item>
     </string-array>
     <string-array name="Questions2_3">
-        <item>B _ _ M I _ _ _ _             (แบดมินตัน)</item>
-        <item>BADMINTON</item>
-        <item>9</item>
+        <item>_ _ _ _M_ _ _              (จดจำ)</item>
+        <item>REMEMBER</item>
+        <item>8</item>
     </string-array>
     <string-array name="Questions2_4">
-        <item>_ _O _ _ A _ L                (ฟุตบอล)</item>
-        <item>FOOTBALL</item>
-        <item>8</item>
-    </string-array>
-    <string-array name="Questions2_5">
-        <item>V _ _ L _ _ B _ _ _           (วอลเลย์บอล)</item>
-        <item>VOLLEYBALL</item>
-        <item>10</item>
-    </string-array>
-    <string-array name="Questions2_6">
-        <item>_ _ W _ I _ G                 (โบว์ลิ่ง)</item>
-        <item>BOWLING</item>
-        <item>7</item>
-    </string-array>
-    <string-array name="Questions2_7">
-        <item>T_E_W_ _ _O         	(เทควันโด)</item>
-        <item>TAEKWONDO</item>
-        <item>9</item>
-    </string-array>
-    <string-array name="Questions2_8">
-        <item>_ _I_H_ _ _F_ _ _G   	        (ยกน้ำหนัก)</item>
-        <item>WEIGHTLIFTING</item>
+        <item>IN_ _R_A_I_ _A_                 (นานาชาติ)</item>
+        <item>INTERNATIONAL</item>
         <item>13</item>
     </string-array>
-    <string-array name="Questions2_9">
-        <item>YA _ _ T_N_                   (เรือใบ)</item>
-        <item>YACHTING</item>
-        <item>8</item>
+    <string-array name="Questions2_5">
+        <item>_ _ _ _ _ _ _TY           (ชุมชน)</item>
+        <item>COMMUNITY</item>
+        <item>9</item>
     </string-array>
-    <string-array name="Questions2_10">
-        <item>_Y_ _A _ _ _C_               	(ยิมนาสติก)</item>
-        <item>GYMNASTICS</item>
+    <string-array name="Questions2_6">
+        <item>_ _ _E_E_A_ _                   (เร่งความเร็ว)</item>
+        <item>ACCELERATE</item>
         <item>10</item>
     </string-array>
+    <string-array name="Questions2_7">
+        <item>_ _C_N_ _A_ _          (เน้น)</item>
+        <item>ACCENTUATE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_8">
+        <item>_ _ _ _S_O_ _          (เครื่องประดับ)</item>
+        <item>ACCESSORY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_9">
+        <item>_ _C_D_N_A_ _Y              (โดยบังเอิญ)</item>
+        <item>ACCIDENTALLY</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_10">
+        <item>_ _ _ _ _ _N_               (กำหนดส่ง)</item>
+        <item>DEADLINE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_11">
+        <item>_ _ _R_ _A_ _                   (สิ่งกีดขวาง)</item>
+        <item>BARRICADE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_12">
+        <item>_ _ _ _N_I_ _                       (ความสนใจ)</item>
+        <item>ATTENTION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_13">
+        <item>C_ _B_ _A_ _O_             (การรวมกัน)</item>
+        <item>COMBINATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_14">
+        <item>_O_F_R_ _B_ _             (สะดวกสบาย)</item>
+        <item>COMFORTABLE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_15">
+        <item>_ _ _ _ _N_O_                     (สหาย)</item>
+        <item>COMPANION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_16">
+        <item>_ _ _P_TI_ _O_                  (การแข่งขัน)</item>
+        <item>COMPETITION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_17">
+        <item>_O_ _ _ _ _S_N             (การเปรียบเทียบ)</item>
+        <item>COMPARISON</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_18">
+        <item>_ _ _FI_ _ _ _                        (มั่นใจ)</item>
+        <item>CONFIDENT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_19">
+        <item>_O_ _C_ _ _ _             (มีสติ)</item>
+        <item>CONSCIOUS</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_20">
+        <item>_ _N_ _N_ _U_                  (ต่อเนื่อง)</item>
+        <item>CONTINUOUS</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_21">
+        <item>_ _ _ _ _ _ _L                    (อาชญากร)</item>
+        <item>CRIMINAL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_22">
+        <item>_ _ _ _ _V_ _E                      (เพาะปลูก)</item>
+        <item>CULTIVATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_23">
+        <item>_ _ _R_ _ _ _                           (ลดลง)</item>
+        <item>DECREASE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_24">
+        <item>D_ _ _ _ _ _ _                    (ละเอียดอ่อน)</item>
+        <item>DELICATE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_25">
+        <item>_ _ _E_D_ _ _                         (ขึ้นอยู่กับ)</item>
+        <item>DEPENDENT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_26">
+        <item>D_T_ _ _I_A_I_N             (การกำหนด)</item>
+        <item>DETERMINATION</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_27">
+        <item>_ _ _A_ _O_N_                    (ทำให้ผิดหวัง)</item>
+        <item>DISAPPOINT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_28">
+        <item>_ _ _ _ _V_ _Y                (การค้นพบ)</item>
+        <item>DISCOVERY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_29">
+        <item>_ _ _ _C_I_ _                (มีประสิทธิภาพ)</item>
+        <item>EFFECTIVE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_30">
+        <item>EN_ _U_A_ _M_N_          (การให้กำลังใจ)</item>
+        <item>ENCOURAGEMENT</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_31">
+        <item>_ _ _ _ _I_ _                (ความเท่าเทียมกัน)</item>
+        <item>EQUALITY</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_32">
+        <item>_ _ _E_I_ _L_                      (โดยเฉพาะ)</item>
+        <item>ESPECIALLY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_33">
+        <item>_ _ _ _ _ _I_H                          (ก่อตั้ง)</item>
+        <item>ESTABLISH</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_34">
+        <item>E_ _ _ _ _ _ _E             (ความอยู่รอด)</item>
+        <item>EXISTENCE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_35">
+        <item>_ _ _ _ _ _T_                       (ทางเดินเท้า)</item>
+        <item>FOOTPATH</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_36">
+        <item>_R_ _ _ _ _ _                        (บ่อย)</item>
+        <item>FREQUENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_37">
+        <item>_ _I_ _ _ _ _                          (บ่อย)</item>
+        <item>FRIENDLY</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_38">
+        <item>F_ _ _H_E_ _N_                   (น่ากลัว)</item>
+        <item>FRIGHTENING</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_39">
+        <item>_ _ _ _ _ _ _L                         (เป็นนิสัย)</item>
+        <item>HABITUAL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_40">
+        <item>_ _ _ _ _ _B_E                  (ให้เกียรติ)</item>
+        <item>HONORABLE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_41">
+        <item>_ _ _E_ _ _ _                          (สิ้นหวัง)</item>
+        <item>HOPELESS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_42">
+        <item>_ _ _ _ _ _ _S                            (ตลก)</item>
+        <item>HUMOROUS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_43">
+        <item>I_ _ _ _ _ _ _                          (เพิ่ม)</item>
+        <item>INCREASE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_44">
+        <item>I_ _E_ _ _ _ _S                  (ติดเชื้อ)</item>
+        <item>INFECTIOUS</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_45">
+        <item>_ _ _L_ _N_ _                       (อิทธิพล)</item>
+        <item>INFLUENCE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_46">
+        <item>_ _S_ _U_ _N_                  (เครื่องมือ)</item>
+        <item>INSTRUMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_47">
+        <item>_ _ _ _R_ _P_                  (ขัดจังหวะ)</item>
+        <item>INTERRUPT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_48">
+        <item>_ _ _ _ _T_ _N                       (สิ่งประดิษฐ์)</item>
+        <item>INVENTION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_49">
+        <item>I_ _ _ _A_ _ _N            (คำเชิญ)</item>
+        <item>INVITATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_50">
+        <item>O_ _ _ _ _ _ _E                      (การเชื่อฟัง)</item>
+        <item>OBEDIENCE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_51">
+        <item>_ _ _O_ _ _ _                      (คู่แข่งขัน)</item>
+        <item>OPPONENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_52">
+        <item>_T_ _ _ _ _S_                    (มิฉะนั้น)</item>
+        <item>OTHERWISE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_53">
+        <item>P_ _ _ _ _ _ _               (ภาพวาด)</item>
+        <item>PAINTING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_54">
+        <item>_ _R_ _ _U_ _R                    (โดยเฉพาะ)</item>
+        <item>PARTICULAR</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_55">
+        <item>_ _ _ _ _ _ _E                    (ชักชวน)</item>
+        <item>PERSUADE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_56">
+        <item>_ _ _ _S_ _ _                      (น่ารื่นรมย์)</item>
+        <item>PLEASANT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_57">
+        <item>P_ _ _ _ _ _ _                        (เป็นไปได้)</item>
+        <item>POSSIBLE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_58">
+        <item>_ _ _ _ _ _ _S                     (ล้ำค่า)</item>
+        <item>PRECIOUS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_59">
+        <item>_ _ _PA_ _T_ _N              (การจัดเตรียม)</item>
+        <item>PREPARATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_60">
+        <item>_ _ _S_ _ _ _                           (เก็บรักษา)</item>
+        <item>PRESERVE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_61">
+        <item>_ _O_A_ _L_ _Y                (ความน่าจะเป็น)</item>
+        <item>PROBABILITY</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_62">
+        <item>P_ _C_ _S_ _ _                    (ขบวน)</item>
+        <item>PROCESSION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_63">
+        <item>P_O_U_CI_T_ _ _        (การออกเสียง)</item>
+        <item>PRONUNCIATION</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_64">
+        <item>R_ _ _E_ _F_ _                      (น่าเคารพ)</item>
+        <item>RESPECTFUL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_65">
+        <item>_H_ _ _ _ _ _                         (คุกคาม)</item>
+        <item>THREATEN</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_66">
+        <item>_ _S_ _ _ _ _                         (ชั้นบน)</item>
+        <item>UPSTAIRS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_67">
+        <item>A_ _I_ _N_A_ _Y                   (บังเอิญ)</item>
+        <item>ACCIDENTALLY</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_68">
+        <item>_ _ _U_ _ _ _                      (ถูกต้อง)</item>
+        <item>ACCURATE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_69">
+        <item>_ _A_ _A_ _O_                     (การปรับตัว)</item>
+        <item>ADAPTATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_70">
+        <item>_ _R_ _U_ _U_E         (เกษตรกรรม)</item>
+        <item>AGRICULTURE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_71">
+        <item>_ _ _IT_ _ _ _                       (ทะเยอทะยาน)</item>
+        <item>AMBITIOUS</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_72">
+        <item>A_NO_ _C_ _E_ _               (ประกาศ)</item>
+        <item>ANNOUNCEMENT</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_73">
+        <item>A_N_ _E_ _A_ _                     (วันครบรอบ)</item>
+        <item>ANNIVERSARY</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_74">
+        <item>A_ _H_E_ _O_I_T            (นักโบราณคดี)</item>
+        <item>ARCHAEOLOGIST</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_75">
+        <item>A_ _ _S_ _N_T_                     (ลอบสังหาร)</item>
+        <item>ASSASSINATE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_76">
+        <item>_ _ _ _O_ _G_                 (โหราศาสตร์)</item>
+        <item>ASTROLOGY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_77">
+        <item>_ _ _ _ _ _ _E               (ทัศนคติ)</item>
+        <item>ATTITUDE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_78">
+        <item>_ _ _ _I_ _E_                  (ทนายความ)</item>
+        <item>BARRISTER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_79">
+        <item>_ _ _ _N_ _N_                    (จุดเริ่มต้น)</item>
+        <item>BEGINNING</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_80">
+        <item>_ _ _ _V_ _ _              (ความประพฤติ)</item>
+        <item>BEHAVIOR</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_81">
+        <item>B_ _L_OG_A_ _ _               (บรรณานุกรม)</item>
+        <item>BIBLIOGRAPHY</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_82">
+        <item>_U_ _ _ _ _ _               (รังแก)</item>
+        <item>BULLYING</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_83">
+        <item>C_ _ _U_ _ _ _E                      (อำพลาง)</item>
+        <item>CAMOUFLAGE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_84">
+        <item>C_U_ _ _N_ _ _                 (ข้อควรระวัง)</item>
+        <item>CAUTIONARY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_85">
+        <item>_ _M_ _O_ _S_                 (ประนีประนอม)</item>
+        <item>COMPROMISE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_86">
+        <item>C_ _C_ _ _I_ _               (สรุป)</item>
+        <item>CONCLUSION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_87">
+        <item>D_ _ _C_ _I_ _                  (การอุทิศ)</item>
+        <item>DEDICATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_88">
+        <item>D_F_ _A_ _ _ _              (หมิ่นประมาท)</item>
+        <item>DEFAMATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_89">
+        <item>_ _ _ _ _ _ _S                    (ผลกำไร)</item>
+        <item>EARNINGS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_90">
+        <item>_ _ _ _O_ _Z_                (ประหยัด)</item>
+        <item>ECONOMIZE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_91">
+        <item>_ _ _B_ _A_ _                    (ประณีต)</item>
+        <item>ELABORATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_92">
+        <item>_ _E_T_ _C_ _N                 (ช่างไฟฟ้า)</item>
+        <item>ELECTRICIAN</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_93">
+        <item>_ _ _ _ _ _ _L          (การกล่าวลา)</item>
+        <item>FAREWELL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_94">
+        <item>G_ _ _ _ _ _ _                     (ใจกว้าง)</item>
+        <item>GENEROUS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_95">
+        <item>_ _ _ _ _ _ _K                      (หนังสือคู่มือ)</item>
+        <item>HANDBOOK</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_96">
+        <item>H_ _D_ _A_ _E_S            (สำนักงานใหญ่)</item>
+        <item>HEADQUARTERS</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_97">
+        <item>I_L_ _T_ _T_ _N                (ภาพประกอบ)</item>
+        <item>ILLUSTRATION</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_98">
+        <item>_ _ _O_ _L_ _Y               (ความผิดศีลธรรม)</item>
+        <item>IMMORALITY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_99">
+        <item>_ _ _ _ _ _ _NT                  (ใจร้อน)</item>
+        <item>IMPATIENT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_100">
+        <item>I_ _ _ _ _M_ _T                     (อุปสรรค)</item>
+        <item>IMPEDIMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_101">
+        <item>IM_ _R_ _ _A_ _              (เลียนแบบ)</item>
+        <item>IMPERSONATE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_102">
+        <item>M_GN_ _ _C_ _ _ON             (การขยาย)</item>
+        <item>MAGNIFICATION</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_103">
+        <item>_A_ _O_ _L_ _Y                    (สัญชาติ)</item>
+        <item>NATIONALITY</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_104">
+        <item>N_ _ _I_ _N_ _               (ความละเลย)</item>
+        <item>NEGLIGENCE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_105">
+        <item>_ _ _ _ _ _M_                    (ทัศนียภาพ)</item>
+        <item>PANORAMA</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_106">
+        <item>_ _ _ _ _ _AP_            (ย่อหน้า)</item>
+        <item>PARAGRAPH</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_107">
+        <item>_A_ _N_ _E_ _S            (วงเล็บ)</item>
+        <item>PARENTHESES</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_108">
+        <item>_A_ _ _C_ _A_E            (มีส่วนร่วม)</item>
+        <item>PARTICIPATE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_109">
+        <item>_A_ _N_ _S_ _P                 (ห้างหุ้นส่วน)</item>
+        <item>PARTNERSHIP</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_110">
+        <item>S_AT_E_B_ _I_ _D              (ประมาท)</item>
+        <item>SCATTERBRAINED</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="Questions2_111">
+        <item>T_LE_O_MU_I_A_ _ON      (โทรคมนาคม)</item>
+        <item>TELECOMMUNICATION</item>
+        <item>17</item>
+    </string-array>
+    <string-array name="Questions2_112">
+        <item>_N_V_ _ _A_ _E                   (หลีกเลี่ยงไม่ได้)</item>
+        <item>UNAVOIDABLE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_113">
+        <item>_N_ _ _ _N_L_                     (ไม่เป็นมิตร)</item>
+        <item>UNFRIENDLY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_114">
+        <item>U_ _ _ _ _ _ _L                  (เป็นสากล)</item>
+        <item>UNIVERSAL</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_115">
+        <item>WA_ _ _ _ _ _ _                    (คลังสินค้า)</item>
+        <item>WAREHOUSE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_116">
+        <item>_ _ _IL_ _R_ _Y          (ความคุ้นเคย)</item>
+        <item>FAMILIARITY</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_117">
+        <item>C_ _T_ _ _A_ _Y                (ต่อเนื่อง)</item>
+        <item>CONTINUALLY</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_118">
+        <item>C_ _ _ _ _ _ _T                     (ลิขสิทธิ์)</item>
+        <item>COPYRIGHT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_119">
+        <item>D_ _T_ _A_ _ _N                  (จุดมุ่งหมาย)</item>
+        <item>DESTINATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_120">
+        <item>_ _TE_ _ _ _ _                  (นักสืบ)</item>
+        <item>DETECTIVE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_121">
+        <item>D_ _ _O_ _ _ _                (ปริญญาเอก)</item>
+        <item>DOCTORATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_122">
+        <item>E_ _ _ _M_ _ _                 (นักเศรษฐศาสตร์)</item>
+        <item>ECONOMIST</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_123">
+        <item>E_ _ _ _A_ _ _                 (บันไดเลื่อน)</item>
+        <item>ESCALATOR</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_124">
+        <item>_ _ _G_ _ _ _                (อย่างระมัดระวัง)</item>
+        <item>GINGERLY</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_125">
+        <item>_A_ _ _C_ _ _T              (หัตถกรรม)</item>
+        <item>HANDICRAFT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_126">
+        <item>HA_ _S_ _ _I_ _               (ช่างทำผม)</item>
+        <item>HAIRSTYLIST</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_127">
+        <item>I_ _ _ _ _ _ _                (ไร้เดียงสา)</item>
+        <item>INNOCENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_128">
+        <item>I_ _ _ _N_ _ _Y           (ภายใน)</item>
+        <item>INTERNALLY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_129">
+        <item>I_ _ _R_ _ _ _          (สัมภาษณ์)</item>
+        <item>INTERVIEW</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_130">
+        <item>_ _ _ _ _ _ _R             (นักลงทุน)</item>
+        <item>INVESTOR</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_131">
+        <item>M_ _L_ _ _A_ _E                   (เศรษฐี)</item>
+        <item>MILLIONAIRE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_132">
+        <item>M_ _ _ _ _ _ _           (นอกจากนั้น)</item>
+        <item>MOREOVER</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_133">
+        <item>_ _ _ _O_ _I_E               (ทั่วประเทศ)</item>
+        <item>NATIONWIDE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_134">
+        <item>_ _ _ _T_ _ _E              (เจรจาต่อรอง)</item>
+        <item>NEGOTIATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_135">
+        <item>_ _ _ _P_ _ _           (หนังสือเดินทาง)</item>
+        <item>PASSPORT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_136">
+        <item>_ _ _ _ _ _ _OR        (ศาสตราจารย์)</item>
+        <item>PROFESSOR</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_137">
+        <item>_S_ _H_ _O_ _ST                (นักจิตวิทยา)</item>
+        <item>PSYCHOLOGIST</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_138">
+        <item>_U_ _S_ _E_ _             (การลงโทษ)</item>
+        <item>PUNISHMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_139">
+        <item>QU_ _T_O_N_ _R_           (แบบสอบถาม)</item>
+        <item>QUESTIONNAIRE</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_140">
+        <item>_E_EP_ _ _N_ _T             (พนักงานต้อนรับ)</item>
+        <item>RECEPTIONIST</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_141">
+        <item>R_ _ _ _ _ _ _           (ลงทะเบียน)</item>
+        <item>REGISTER</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_142">
+        <item>S_ _ _ _ _ _ _C           (สถิติ)</item>
+        <item>STATISTIC</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_143">
+        <item>_ _ _ _ _ _ _Y            (กลยุทธ์)</item>
+        <item>STRATEGY</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_144">
+        <item>_ _B_ _ _ _ _ E              (เรือดำน้ำ)</item>
+        <item>SUBMARINE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_145">
+        <item>S_ _ _L_ _ _ _S            (แว่นตากันแดด)</item>
+        <item>SUNGLASSES</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_146">
+        <item>_R_ _ _ _ _ _N              (ขนบธรรมเนียม)</item>
+        <item>TRADITION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_147">
+        <item>_ _ _ _ _G_ _              (สามเหลี่ยม)</item>
+        <item>TRIANGLE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_148">
+        <item>_A_ _ _ _I_ _         (การตีราคา)</item>
+        <item>VALUATION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_149">
+        <item>V_TE_ _ _A_ _A_                  (สัตวแพทย์)</item>
+        <item>VETERINARIAN</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_150">
+        <item>_ _ _ _ _ _ _R          (ชาวบ้าน)</item>
+        <item>VILLAGER</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_151">
+        <item>J_ _ _ _ _ _ _      (การตัดสิน)</item>
+        <item>JUDGMENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_152">
+        <item>_ _ _ _R_ _ _CY           (ล้มละลาย)</item>
+        <item>BANKRUPTCY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_153">
+        <item>CA_ _ _E_ _ _E_S          (ความประมาท)</item>
+        <item>CARELESSNESS</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_154">
+        <item>DEC_ _I_ _ _E_ _             (ความเด็ดขาด)</item>
+        <item>DECISIVENESS</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_155">
+        <item>_ _ _ _ _A_ _ON               (สัญญา)</item>
+        <item>OBLIGATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_156">
+        <item>PA_ _ _ _ _ _ _                (บรรพบุรุษ)</item>
+        <item>PARENTAGE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_157">
+        <item>P_ _ _ _ _ _ _                  (แผ่นพับ)</item>
+        <item>PAMPHLET</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_158">
+        <item>UL_ _ _A_ _ _ _                   (ท้ายที่สุด)</item>
+        <item>ULTIMATELY</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_159">
+        <item>_C_ _ _E_ _ _       (กระจัดกระจาย)</item>
+        <item>SCATTERED</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_160">
+        <item>_ _ _ _ _R_ _            (จักรวาล)</item>
+        <item>UNIVERSE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_161">
+        <item>_E_ _ _A_ _ _N                   (มังสวิรัติ)</item>
+        <item>VEGETARIAN</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_162">
+        <item>W_ _ _H_ _ _A_                 (นักอุตุนิยมวิทยา)</item>
+        <item>WEATHERMAN</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_163">
+        <item>R_ _ _ _S_ _ _                     (แทน)</item>
+        <item>REPRESENT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_164">
+        <item>_ _ _ _ _A_ _          (สละราชสมบัติ)</item>
+        <item>ABDICATE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_165">
+        <item>_ _ _ _M_ _ _R             (เครื่องวัดความกดอากาศ)</item>
+        <item>BAROMETER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_166">
+        <item>_E_ _ _A_ _ _N          (ยุค)</item>
+        <item>GENERATION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_167">
+        <item>G_ _ _ _ _ _ _                      (น้ำมันเบนซิน)</item>
+        <item>GASOLINE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_168">
+        <item>T_ _ _ _ _ _ _T        (ขนส่ง)</item>
+        <item>TRANSPORT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_169">
+        <item>_ _ _ _ _ _ _MY                    (ดาราศาสตร์)</item>
+        <item>ASTRONOMY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_170">
+        <item>B_ _G_ _ _ _ _                   (ชีวประวัติ)</item>
+        <item>BIOGRAPHY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_171">
+        <item>_ _U_E_ _ _ _                (ถนนใหญ่)</item>
+        <item>BOULEVARD</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_172">
+        <item>C_ _ _ _ _A_ _         (ฉลอง)</item>
+        <item>CELEBRATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_173">
+        <item>P_O_ _ _M_ _ _                  (โปรแกรมเมอร์)</item>
+        <item>PROGRAMMER</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_174">
+        <item>C_ _G_ATU_A_ _ _N            (แสดงความยินดี)</item>
+        <item>CONGRATULATION</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="Questions2_175">
+        <item>_ _U_ _ _B_ _         (นับได้)</item>
+        <item>COUNTABLE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_176">
+        <item>_U_ _ _ _U_ _ _                     (หลักสูตร)</item>
+        <item>CURRICULAR</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_177">
+        <item>_ _ _ _ _ _E_T             (การเต้นของหัวใจ)</item>
+        <item>HEARTBEAT</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_178">
+        <item>_ _R_ _ _T_ _              (ช่างไม้)</item>
+        <item>CARPENTER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_179">
+        <item>C_ _ _ _ _T_ _S               (ผู้บาดเจ็บ)</item>
+        <item>CASUALTIES</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_180">
+        <item>C_R_I_ _ _A_ _             (ประกาศนียบัตร)</item>
+        <item>CERTIFICATE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_181">
+        <item>C_RR_ _P_ _ _E_T               (ผู้สื่อข่าว)</item>
+        <item>CORRESPONDENT</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_182">
+        <item>D_ _ _ _ _ _ _             (เส้นผ่าศูนย์กลาง)</item>
+        <item>DIAMETER</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_183">
+        <item>_ _ _ _ _ _ _M        (แบบจำลอง)</item>
+        <item>PARADIGM</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_184">
+        <item>PA_AL_ _ _O_ _ _M         (สี่เหลี่ยมด้านขนาน)</item>
+        <item>PARALLELOGRAM</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_185">
+        <item>P_ _ _ _E_ _ _                   (พารามิเตอร์)</item>
+        <item>PARAMETER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_186">
+        <item>_ _N_ _ _M_ _T                    (การจัดการ)</item>
+        <item>MANAGEMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_187">
+        <item>_R_ _I_E_ _ _RE                   (สถาปนิก)</item>
+        <item>ARCHITECTURE</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_188">
+        <item>_ _R_ _A_ _ _                (ภารโรง)</item>
+        <item>CARETAKER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_189">
+        <item>C_ _T_ _ _T_ _                     (ผู้รับเหมา)</item>
+        <item>CONTRACTOR</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_190">
+        <item>I_T_R_ _ _T_ _                 (ล่าม)</item>
+        <item>INTERPRETER</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_191">
+        <item>_ _ _ _ _M_ _                    (นักการฑูต)</item>
+        <item>DIPLOMAT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_192">
+        <item>_ _ _O_ _ _E_     (โฆษก)</item>
+        <item>ANNOUNCER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_193">
+        <item>_ _ _ _E_ _ _R               (ผู้ตรวจการ)</item>
+        <item>INSPECTOR</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_194">
+        <item>O_ _ _ _ _ _ _P                  (กรรมสิทธิ์)</item>
+        <item>OWNERSHIP</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_195">
+        <item>B_ _ _ _S_ _ _                     (ทนายความ)</item>
+        <item>BARRISTER</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_196">
+        <item>A_ _ _ _ _ _A_E      (สะสม)</item>
+        <item>ACCUMULATE</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_197">
+        <item>_ _ _ _ _D_ _E                 (ผู้สมัคร)</item>
+        <item>CANDIDATE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_198">
+        <item>C_ _E_R_ _ _O_                (การเฉลิมฉลอง)</item>
+        <item>CELEBRATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_199">
+        <item>D_M_N_ _R_ _ _              (สาธิต)</item>
+        <item>DEMONSTRATE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_200">
+        <item>_ _ _ _ _E_ _Y                     (ภาวะฉุกเฉิน)</item>
+        <item>EMERGENCY</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_201">
+        <item>_ _ _ _ _ _ _E           (ลังเล)</item>
+        <item>HESITATE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_202">
+        <item>_ _ _ _G_ _ _E             (อ่านไม่ออก)</item>
+        <item>ILLEGIBLE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_203">
+        <item>_ _ _ _ _I_ _            (ภาพลวงตา)</item>
+        <item>ILLUSION</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_204">
+        <item>L_ _ _N_A_ _ _N                   (โศกเศร้า)</item>
+        <item>LAMENTATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_205">
+        <item>_ _ _ _ _ _ _L                (วัสดุ)</item>
+        <item>MATERIAL</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_206">
+        <item>_ _ _ _A_ _ _                (รณรงค์)</item>
+        <item>CAMPAIGN</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_207">
+        <item>_O_ _ _S_I_ _         (ค่าคอมมิชชั่น)</item>
+        <item>COMMISSION</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_208">
+        <item>C_ _ _RO_ P_N_ _              (แผงควบคุม)</item>
+        <item>CONTROLPANEL</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_209">
+        <item>_ _ _ _ _T_ _E            (ข้อบกพร่อง)</item>
+        <item>DEFECTIVE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_210">
+        <item>_ _ _ _M_ _ _             (เอกสาร)</item>
+        <item>DOCUMENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_211">
+        <item>E_ _ _ _EE_ _N_                  (วิศวกรรม)</item>
+        <item>ENGINEERING</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_212">
+        <item>E_V_ _O_M_ _ _       (สิ่งแวดล้อม)</item>
+        <item>ENVIRONMENT</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_213">
+        <item>F_U_ _U_ _I_ _                 (ความผันผวน)</item>
+        <item>FLUCTUATION</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_214">
+        <item>_ _R_ _T_ _ _         (หลงลืม)</item>
+        <item>FORGETFUL</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_215">
+        <item>_ _ _ _A_ _E_           (รับประกัน)</item>
+        <item>GUARANTEE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_216">
+        <item>I_T_ _N_ _ _ _                 (การฝึกงาน)</item>
+        <item>INTERNSHIP</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_217">
+        <item>_N_ _ _T_ _N_              (เงินลงทุน)</item>
+        <item>INVESTMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_218">
+        <item>_ _ _ _ _O_ _                (เจ้าของบ้าน)</item>
+        <item>LANDLORD</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_219">
+        <item>_ _ _ _ _E_ _               (อนุเสาวรีย์)</item>
+        <item>MONUMENT</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_220">
+        <item>_ _ _ _N_ _ _                   (เสนอชื่อ)</item>
+        <item>NOMINATE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_221">
+        <item>P_S_ _O_ _M_N_               (การเลื่อนเวลา)</item>
+        <item>POSTPONEMENT</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_222">
+        <item>R_S_ _U_ _U_ _               (ปรับโครงสร้าง)</item>
+        <item>RESTRUCTURE</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_223">
+        <item>R_ _I_ _M_ _ _                  (เกษียณอายุ)</item>
+        <item>RETIREMENT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_224">
+        <item>_ _ _ _ _U_ _                   (กำหนดการ)</item>
+        <item>SCHEDULE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_225">
+        <item>_ _L_ _ _I_ _                (การคัดเลือก)</item>
+        <item>SELECTION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_226">
+        <item>_ _ _ _ _ _ _E              (ซอฟต์แวร์)</item>
+        <item>SOFTWARE</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_227">
+        <item>_ _ _ _E T_ _ _             (เวลาว่าง)</item>
+        <item>SPARETIME</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_228">
+        <item>S_ _ _T_ _ _ _              (ผู้ชม)</item>
+        <item>SPECTATOR</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_229">
+        <item>_H_ _R_ _IC_ _       (ทฤษฏี)</item>
+        <item>THEORETICAL</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="Questions2_230">
+        <item>U_ _O_ _I_IO_A_        (ไม่มีเงื่อนไข)</item>
+        <item>UNCONDITIONAL</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_231">
+        <item>_N_ _R_ _A_ _             (เข้าใจ)</item>
+        <item>UNDERSTAND</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_232">
+        <item>W_ _E_ _R_ _ _           (กันน้ำ)</item>
+        <item>WATERPROOF</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_233">
+        <item>_ _ _L_ _A_ _        (การขายส่ง)</item>
+        <item>WHOLESALE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_234">
+        <item>_ _ _K_ _ _C_              (ที่ทำงาน)</item>
+        <item>WORKPLACE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_235">
+        <item>W_ _ _H_ _ _ _              (ไร้คุณค่า)</item>
+        <item>WORTHLESS</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_236">
+        <item>C_ _ _ _C_ _ _                  (วิจารณ์)</item>
+        <item>CRITICIZE</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_237">
+        <item>D_S_ _I_IN_ _IO_                  (การแบ่งแยก)</item>
+        <item>DISCRIMINATION</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="Questions2_238">
+        <item>Q_ _ _ _ _ _ _              (คำถาม)</item>
+        <item>QUESTION</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_239">
+        <item>_ _ _ _ _ _ _S          (หิวโหย)</item>
+        <item>RAVENOUS</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_240">
+        <item>S_ _R_H _N_ _N_       (เครื่องมือค้นหา)</item>
+        <item>SEARCHENGINE</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_241">
+        <item>_ _ _H_R_ _ _L        (การถอนคืน)</item>
+        <item>WITHDRAWAL</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_242">
+        <item>F_ _ _ _ _ _ _C     (มหัศจรรย์)</item>
+        <item>FANTASTIC</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_243">
+        <item>_ _ _ _ _ _ _K       (สถานที่สำคัญ)</item>
+        <item>LANDMARK</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="Questions2_244">
+        <item>_ _ _H_ _ _ _T          (ช่างเครื่อง)</item>
+        <item>MACHINIST</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_245">
+        <item>O_ _O_E_ _E_ _E   (ความล้าสมัย)</item>
+        <item>OBSOLESCENCE</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Questions2_246">
+        <item>_ _ _ _A_ _ _N        (การแผ่รังสี)</item>
+        <item>RADIATION</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_247">
+        <item>S_ _R_ _ _N_ _       (ศักดิ์สิทธิ์)</item>
+        <item>SACROSANCT</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Questions2_248">
+        <item>_ _ _ _ _ _ _US               (เป็นเอกฉันท์)</item>
+        <item>UNANIMOUS</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="Questions2_249">
+        <item>U_ _ _R_ _AD_A_E           (ระดับปริญญาตรี)</item>
+        <item>UNDERGRADUATE</item>
+        <item>13</item>
+    </string-array>
+    <string-array name="Questions2_250">
+        <item>_ _ _A_ _ _ _                    (คนพเนจร)</item>
+        <item>VAGABOND</item>
+        <item>8</item>
+    </string-array>
+
+
 
 </resources>

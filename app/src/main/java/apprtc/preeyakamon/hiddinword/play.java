@@ -108,7 +108,7 @@ public class play extends ActionBarActivity {
 
                         if (timeInts[intIndex] == 0) {
                             aBoolean = false;
-                            myAlertPlay("หมดเวลา", "เล่นใหม่ หมดเวลาคะ");
+                            myAlertPlay("หมดเวลา", "เล่นใหม่ หมดเวลาแล้วคะ");
                         } else {
                             myLoop();
                         }
@@ -129,7 +129,7 @@ public class play extends ActionBarActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
-        builder.setIcon(R.drawable.icon1);
+        builder.setIcon(R.drawable.icon3);
         builder.setTitle(strTitle);
         builder.setMessage(strMessage);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -297,8 +297,8 @@ public class play extends ActionBarActivity {
 
     private void Read_Question() {
 
-//        String[] myQuestionStrings = new String[]{"Questions_", "Questions1_", "Questions2_"};
-        String[] myQuestionStrings = new String[]{"Questions_", "Questions_", "Questions_"};
+        String[] myQuestionStrings = new String[]{"Questions_", "Questions1_", "Questions2_"};
+        //String[] myQuestionStrings = new String[]{"Questions_", "Questions_", "Questions_"};
 
         for (int i = 0; i < Quest.length; i++) {
             String quest_tag = myQuestionStrings[intIndex] + String.valueOf(i + 1);
@@ -363,7 +363,7 @@ public class play extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("Confirm for out of Application?");
+        alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
