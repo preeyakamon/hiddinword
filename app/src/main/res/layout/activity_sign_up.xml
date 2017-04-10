@@ -4,6 +4,7 @@
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/lever3"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,93 +12,93 @@
     tools:context="apprtc.preeyakamon.hiddinword.SignUp">
 
     <TextView
-        android:text="Sign Up"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
         android:textSize="30sp"
-        android:textStyle="normal|bold"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="normal|bold" />
 
     <Button
-        android:text="Sign Up"
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:text="Sign Up" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="Name :"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="Name :"
                 android:textSize="18sp" />
 
             <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
                 android:id="@+id/editText"
-                android:layout_weight="2" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="User :"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="User :"
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/editText2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:layout_weight="2"
                 android:ems="10"
-                android:id="@+id/editText2"
-                android:layout_weight="2" />
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="Password :"
+                android:id="@+id/textView4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView4"
                 android:layout_weight="1"
+                android:text="Password :"
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/editText3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:layout_weight="2"
                 android:ems="10"
-                android:id="@+id/editText3"
-                android:layout_weight="2" />
+                android:inputType="textPersonName" />
         </LinearLayout>
 
     </LinearLayout>

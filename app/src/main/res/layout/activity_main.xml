@@ -28,12 +28,4 @@
         android:layout_marginTop="10dp"
         android:longClickable="true" />
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:id="@+id/imageView"
-        android:background="@drawable/tet"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="480dp" />
-
 </RelativeLayout>
