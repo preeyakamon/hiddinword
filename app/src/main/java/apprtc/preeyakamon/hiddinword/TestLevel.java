@@ -277,6 +277,7 @@ public class TestLevel extends ActionBarActivity {
         txtAnswer.setText("");
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();

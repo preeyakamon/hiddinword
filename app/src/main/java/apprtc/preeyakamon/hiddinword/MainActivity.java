@@ -48,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(nextIntent);
 
     }
+
     @Override
     protected  void onPause(){
         super.onPause();

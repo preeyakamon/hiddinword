@@ -42,7 +42,8 @@ public class play extends ActionBarActivity {
         timeTextView = (TextView) findViewById(R.id.textView6);
 
 
-        intIndex = myFindIndex() - 1;
+        intIndex = myFindIndex();
+
 
 
         //Show TextView
@@ -51,11 +52,11 @@ public class play extends ActionBarActivity {
             intIndex = bundle.getInt("Index", 0);
             intIndex -= 1;
         }
-        levelTextView.setText("Level " + Integer.toString(intIndex + 1));
-        timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
+        levelTextView.setText("Level " + Integer.toString(intIndex+1));
+        timeTextView.setText(Integer.toString(timeInts[intIndex >= 3 ? 2 : intIndex]) + " sec");
 
         // Update playTABLE ส่ง intIndex + 1 เข้าไปอัพเดท
-        updatePlayTable(intIndex + 1);
+        //updatePlayTable(intIndex +1);
 
         init_view();
         Read_Question();
@@ -82,12 +83,12 @@ public class play extends ActionBarActivity {
             Log.d("Test", ""+Integer.parseInt(cursor.getString(2)));
             return Integer.parseInt(cursor.getString(2));
 
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+            return 0;
 
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-        return 0;
-    }
 
     private void myLoop() {
 
@@ -95,7 +96,6 @@ public class play extends ActionBarActivity {
             //Do it
             timeInts[intIndex] -= 1;
             timeTextView.setText(Integer.toString(timeInts[intIndex]) + " sec");
-
 
 
             //Delay
@@ -108,7 +108,7 @@ public class play extends ActionBarActivity {
 
                         if (timeInts[intIndex] == 0) {
                             aBoolean = false;
-                            myAlertPlay("หมดเวลา", "เล่นใหม่ หมดเวลาแล้วคะ");
+                            myAlertPlay("หมดเวลา", "เล่นใหม่ หมดเวลาแล้ว");
                         } else {
                             myLoop();
                         }
@@ -135,18 +135,14 @@ public class play extends ActionBarActivity {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
-
-
                 Intent intent = getIntent();
-                intent.putExtra("Index", "หมดเวลา".equalsIgnoreCase(strTitle) ? intIndex : intIndex + 1);
+                intent.putExtra("Index", "หมดเวลาแล้ว ต้องทำเร็วกว่านี้หน่อยนะ".equalsIgnoreCase(strTitle) ? intIndex : intIndex + 1);
                 startActivity(intent);
                 dialogInterface.dismiss();
                 finish();
             }
         });
         builder.show();
-
     }
 
     public void onClickTex(View view) {
@@ -239,20 +235,20 @@ public class play extends ActionBarActivity {
             if (txt1.equals(txt2)) {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + txt1, Toast.LENGTH_LONG).show();
 
-             //  int[] ints = new int[]{20, 30, 40};
-                int[] ints = new int[]{2, 3, 4};
+                //  int[] ints = new int[]{20, 30, 40};
+                int[] ints = new int[]{3, 3, 3};
 
                 scoreAnInt += 1;
                 if (scoreAnInt == ints[intIndex]) {
 
                     if (intIndex == 2) {
                         Intent intent = new Intent(play.this, Success.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                        intent.putExtra("score", scoreAnInt);
                         startActivity(intent);
                     }   // if
-
                     intIndex += 1;
                     myAlertPlay("ผ่านด่านแล้ว", "ยินดีด้วย ผ่านด่านแล้ว");
-
 
                 }   // if
 
@@ -283,6 +279,7 @@ public class play extends ActionBarActivity {
         //เสียงปุ่มcl
 
     }
+
 
     private void init_view() {
         txtQuestion = (TextView) findViewById(R.id.txtQuest_p);
@@ -357,7 +354,8 @@ public class play extends ActionBarActivity {
         ContentValues data = new ContentValues();
         data.put("Level", String.valueOf(level));
         int updated = sqLiteDatabase.update("playTABLE", data, "idUser = '" + spf.getString("idUser", "") + "'", null);
-        //Log.d("TEST", "Updated : " + updated);
+        //Log.d("PlayLog", "Level : " + level + ", Updated: " + updated);
+        //Log.d("PlayLog", "idUser: " + spf.getString("idUser", ""));
     }
 
     @Override
@@ -373,4 +371,6 @@ public class play extends ActionBarActivity {
         alertDialog.setNegativeButton("Cancel", null);
         alertDialog.show();
     }
+
+
 }

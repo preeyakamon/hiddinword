@@ -23,7 +23,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".TestLevel" />
-        <activity android:name=".Success"></activity>
+        <activity android:name=".Success" />
+        <activity android:name=".Statistic" />
+        <activity android:name=".Menu"></activity>
     </application>
 
 </manifest>

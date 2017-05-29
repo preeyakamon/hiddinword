@@ -9,7 +9,7 @@
     <string-array name="Questions1_2">
         <item>_ _C_ _E_T           (อุบัติเหตุ)</item>
         <item>ACCIDENT </item>
-        <item>9</item>
+        <item>8</item>
     </string-array>
     <string-array name="Questions1_3">
         <item>A_ _E_T_B_E              (ยอมรับได้)</item>
@@ -361,7 +361,7 @@
         <item>10</item>
     </string-array>
     <string-array name="Questions1_73">
-        <item>D_ _F_ _U_T                     (ยาก)</item>
+        <item>D_ _F_ _U_T                    (ยาก)</item>
         <item>DIFFICULT</item>
         <item>9</item>
     </string-array>

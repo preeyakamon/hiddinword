@@ -112,11 +112,13 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
             if (userCheckLevel()) {
                 //No Data
-                Intent intent = new Intent(Authen.this, TestLevel.class);
+                Intent intent = new Intent(Authen.this, Menu.class);
+                intent.putExtra("test", true);
                 startActivity(intent);
                 finish();
             } else {
-                Intent intent = new Intent(Authen.this, play.class);
+                Intent intent = new Intent(Authen.this, Menu.class);
+                intent.putExtra("test", false);
                 startActivity(intent);
                 finish();
             }
