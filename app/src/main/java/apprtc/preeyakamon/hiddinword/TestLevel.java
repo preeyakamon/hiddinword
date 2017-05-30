@@ -47,6 +47,13 @@ public class TestLevel extends ActionBarActivity {
 
         myLoop();
 
+        (findViewById(R.id.btnDle)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickDel();
+            }
+        });
+
     }   // Main Method
 
     private void myLoop() {
@@ -106,7 +113,7 @@ public class TestLevel extends ActionBarActivity {
 
                 addLevelToSQLite(level);
 
-                Intent intent = new Intent(TestLevel.this, play.class);
+                Intent intent = new Intent(TestLevel.this, playable.class);
                 intent.putExtra("Index", level);
                 startActivity(intent);
 
@@ -303,5 +310,15 @@ public class TestLevel extends ActionBarActivity {
         });
         alertDialog.setNegativeButton("Cancel", null);
         alertDialog.show();
+    }
+
+    public void onClickDel() {
+        if (txtAnswer != null) {
+            String ans = txtAnswer.getText().toString(); // ดึงคำตอบออกมาเก็บใน ans ก่อน
+            if (ans.length() > 0) { // ตรวจสอบว่า เราได้ใส่ตัวอักษรไปหรือยัง
+                ans = ans.substring(0, ans.length() - 1); // ให้ตัดตัวอักษรตัวสุดท้ายออกแล้วเก็บเข้าไปในตัวแปร ans
+                txtAnswer.setText(ans); // ในค่าลงไปใน TextView เหมือนเดิม
+            }
+        }
     }
 }

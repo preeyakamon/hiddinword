@@ -21,7 +21,6 @@ public class Menu extends ActionBarActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Statistic.class);
                 startActivity(intent);
-                finish();
             }
         });
 

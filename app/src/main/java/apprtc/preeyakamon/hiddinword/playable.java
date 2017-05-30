@@ -214,9 +214,9 @@ public class playable extends ActionBarActivity {
             final String correct = Ans[Quest_Item - 1];
             if (ans.equalsIgnoreCase(correct)) { // ตอบถูก
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + ans, Toast.LENGTH_SHORT).show();
-                int[] ints = new int[]{3, 3, 3}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
+                int[] ints = new int[]{1, 1, 1}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
                 scoreAnInt += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
-                scoreTotal += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
+                scoreTotal += 1;
                 if (scoreAnInt == ints[intIndex]) {
                     if (intIndex == 2) {
                         Intent intent = new Intent(playable.this, Success.class);

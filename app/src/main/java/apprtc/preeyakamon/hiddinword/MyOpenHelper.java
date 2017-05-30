@@ -1,5 +1,6 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -65,10 +66,17 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         try {
             final String dateTime = Calendar.getInstance().getTime().toString();
-            StringBuilder sql = new StringBuilder();
-            sql.append("INSERT INTO statisticTABLE");
-            sql.append("(_id, score, datetime) VALUES('" + id + "', '" + score + "', '" + dateTime + "')");
-            db.execSQL(sql.toString());
+//            StringBuilder sql = new StringBuilder();
+//            sql.append("INSERT INTO statisticTABLE");
+//            sql.append("(_id, score, datetime) VALUES('" + id + "', '" + score + "', '" + dateTime + "')");
+//            db.execSQL(sql.toString());
+            ContentValues cv = new ContentValues();
+            cv.put("_id", id);
+            cv.put("score", String.valueOf(score));
+            cv.put("dateTime", dateTime);
+            Long l = db.insert("statisticTABLE", null, cv);
+            Log.d("StatisticLog", "Inserted: " + cv.toString());
+            Log.d("StatisticLog", "Inserted: " + l);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -86,19 +94,20 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         Log.d("StatisticLog", sql);
         try {
             c = db.rawQuery(sql, null);
-            if (c.moveToFirst()) {
-                do {
-                    JSONObject obj = new JSONObject();
-                    obj.put("_id", c.getString(c.getColumnIndex("_id")));
-                    obj.put("score", c.getString(c.getColumnIndex("score")));
-                    obj.put("dateTime", c.getString(c.getColumnIndex("dateTime")));
-                    resp.add(obj);
-                } while (c.moveToNext());
+            Log.d("StatisticLog", "Cursor Size: " + c.getCount());
+            while (c.moveToNext()) {
+                JSONObject obj = new JSONObject();
+                obj.put("_id", c.getString(c.getColumnIndex("_id")));
+                obj.put("score", c.getString(c.getColumnIndex("score")));
+                obj.put("dateTime", c.getString(c.getColumnIndex("dateTime")));
+                resp.add(obj);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
-            //c.close();
+            if (c != null) {
+                c.close();
+            }
         }
         return resp;
     }

@@ -21,12 +21,11 @@ public class Success extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success);
 
-        saveStatistic();
-
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveStatistic();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -80,6 +79,7 @@ public class Success extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
+        saveStatistic();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {

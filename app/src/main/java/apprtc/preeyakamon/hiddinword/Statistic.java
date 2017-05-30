@@ -27,17 +27,7 @@ public class Statistic extends ActionBarActivity {
     public void getStatisticList() {
         MyOpenHelper db = new MyOpenHelper(Statistic.this);
         List<JSONObject> data = db.getStatisticList(Statistic.this);
-        if (data != null) {
-            for (int i = 0; i < data.size(); i++) {
-                try {
-                    JSONObject item = data.get(i);
-                    data.add(item);
-                    //Log.d("StatisticLog", item.toString());
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            }
-        }
+        Log.d("StatisticLog", "getStatList: " + data.size());
         setupListView(data);
     }
 
