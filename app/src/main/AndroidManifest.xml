@@ -26,6 +26,7 @@
         <activity android:name=".Success" />
         <activity android:name=".Statistic" />
         <activity android:name=".Menu"></activity>
+        <activity android:name=".playable" />
     </application>
 
 </manifest>

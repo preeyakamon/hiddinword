@@ -45,14 +45,13 @@ public class play extends ActionBarActivity {
         intIndex = myFindIndex();
 
 
-
         //Show TextView
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             intIndex = bundle.getInt("Index", 0);
             intIndex -= 1;
         }
-        levelTextView.setText("Level " + Integer.toString(intIndex+1));
+        levelTextView.setText("Level " + Integer.toString(intIndex + 1));
         timeTextView.setText(Integer.toString(timeInts[intIndex >= 3 ? 2 : intIndex]) + " sec");
 
         // Update playTABLE ส่ง intIndex + 1 เข้าไปอัพเดท
@@ -80,18 +79,17 @@ public class play extends ActionBarActivity {
                     spf.getString("idUser", ""));
             Cursor cursor = sqLiteDatabase.rawQuery(rawQuery, null);
             cursor.moveToFirst();
-            Log.d("Test", ""+Integer.parseInt(cursor.getString(2)));
+            Log.d("Test", "" + Integer.parseInt(cursor.getString(2)));
             return Integer.parseInt(cursor.getString(2));
 
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-            return 0;
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return 0;
+
+    }
 
     private void myLoop() {
-
         if (aBoolean) {
             //Do it
             timeInts[intIndex] -= 1;
@@ -126,7 +124,6 @@ public class play extends ActionBarActivity {
     }   // myLoop
 
     private void myAlertPlay(final String strTitle, String strMessage) {
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setIcon(R.drawable.icon3);
@@ -288,7 +285,6 @@ public class play extends ActionBarActivity {
         Quest = new String[250];
         Ans = new String[250];
         len_ans = new String[250];
-
 
     }
 

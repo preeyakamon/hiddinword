@@ -1,6 +1,7 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -28,7 +30,7 @@ public class playable extends ActionBarActivity {
     private MediaPlayer soundRadio;
     private TextView txtAnswer, txtQuestion, levelTextView, timeTextView;
     private TypedArray arrQuest;
-    private int Quest_Item, intIndex = 0, scoreAnInt = 0, currentLevel = 0;
+    private int Quest_Item, intIndex = 0, scoreAnInt = 0, currentLevel = 0, scoreTotal = 0;
     private String[] Quest, Ans, len_ans;
     private Random rndQuest = new Random();
     private int[] timeInts;
@@ -205,7 +207,45 @@ public class playable extends ActionBarActivity {
                 break;
         }
 
+        int lenAns = String.valueOf(txtAnswer.getText()).length();
+        int lenCorrect = Integer.valueOf(len_ans[Quest_Item - 1]);
+        if (lenAns == lenCorrect) {
+            final String ans = txtAnswer.getText().toString();
+            final String correct = Ans[Quest_Item - 1];
+            if (ans.equalsIgnoreCase(correct)) { // ตอบถูก
+                Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + ans, Toast.LENGTH_SHORT).show();
+                int[] ints = new int[]{3, 3, 3}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
+                scoreAnInt += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
+                scoreTotal += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
+                if (scoreAnInt == ints[intIndex]) {
+                    if (intIndex == 2) {
+                        Intent intent = new Intent(playable.this, Success.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                        intent.putExtra("score", scoreTotal);
+                        startActivity(intent);
+                    }   // if
+                    intIndex += 1;
+                    currentLevel += 1;
+                    updatePlayTable(currentLevel);
+                    scoreAnInt = 0;
+                    myAlertPlay("ผ่านด่านแล้ว", "ยินดีด้วย ผ่านด่านแล้ว");
+                }
 
+                soundRadio = MediaPlayer.create(getBaseContext(), R.raw.jetsons1);
+                soundRadio.start();
+                //เสียงเวลาถูก
+
+                Quest_Item = rndQuest.nextInt(250) + 1;
+                Screen_Refresh();
+            } else {
+                Toast.makeText(getApplicationContext(), "ลองคิดใหม่นะค่ะ", Toast.LENGTH_SHORT).show();
+                soundRadio = MediaPlayer.create(getBaseContext(), R.raw.a_boing);
+                soundRadio.start();
+                //เสียงเวลาผิด
+            }
+        } else {
+
+        }
 
     }
 
@@ -276,5 +316,17 @@ public class playable extends ActionBarActivity {
                 txtAnswer.setText(ans); // ในค่าลงไปใน TextView เหมือนเดิม
             }
         }
+    }
+
+    public void updatePlayTable(int level) {
+        if (level > 3) level = 3;
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                MODE_PRIVATE, null);
+        SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+        ContentValues data = new ContentValues();
+        data.put("Level", String.valueOf(level));
+        int updated = sqLiteDatabase.update("playTABLE", data, "idUser = '" + spf.getString("idUser", "") + "'", null);
+        Log.d("PlayLog", "Level : " + level + ", Updated: " + updated);
+        Log.d("PlayLog", "idUser: " + spf.getString("idUser", ""));
     }
 }

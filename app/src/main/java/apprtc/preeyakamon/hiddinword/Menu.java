@@ -35,7 +35,7 @@ public class Menu extends ActionBarActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Intent intent = new Intent(Menu.this, play.class);
+                    Intent intent = new Intent(Menu.this, playable.class);
                     startActivity(intent);
                     finish();
                 }
