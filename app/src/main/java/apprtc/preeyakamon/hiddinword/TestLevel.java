@@ -72,9 +72,9 @@ public class TestLevel extends ActionBarActivity {
                         aBoolean = false;
 
                         int i = 0; // 0 test level
-                        if (scoreAnInt > 6) {
+                        if (scoreAnInt >= 6) {
                             i = 3;
-                        } else if (scoreAnInt > 3) {
+                        } else if (scoreAnInt >= 3) {
                             i = 2;
                         } else {
                             i = 1;
@@ -115,12 +115,16 @@ public class TestLevel extends ActionBarActivity {
 
                 Intent intent = new Intent(TestLevel.this, playable.class);
                 intent.putExtra("Index", level);
+                intent.putExtra("total", scoreAnInt);
                 startActivity(intent);
+                finish();
 
                 dialogInterface.dismiss();
             }
         });
-        builder.show();
+        if (!this.isFinishing()) {
+            builder.show();
+        }
 
 
     }   // myDialot
@@ -301,10 +305,12 @@ public class TestLevel extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
+        alertDialog.setTitle("คุณต้องการกลับเมนู ใช่หรือไม่?");
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                Intent in = new Intent(TestLevel.this, Menu.class);
+                startActivity(in);
                 finish();
             }
         });

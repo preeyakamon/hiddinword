@@ -6,12 +6,15 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.format.DateFormat;
 import android.util.Log;
 
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -65,11 +68,10 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void insertStatistic(String id, int score) {
         SQLiteDatabase db = this.getWritableDatabase();
         try {
-            final String dateTime = Calendar.getInstance().getTime().toString();
-//            StringBuilder sql = new StringBuilder();
-//            sql.append("INSERT INTO statisticTABLE");
-//            sql.append("(_id, score, datetime) VALUES('" + id + "', '" + score + "', '" + dateTime + "')");
-//            db.execSQL(sql.toString());
+            //final String dateTime = Calendar.getInstance().getTime().toString();
+            SimpleDateFormat sdfDate = new SimpleDateFormat("dd/MM/yyyy HH:mm");//dd/MM/yyyy
+            Date now = new Date();
+            final String dateTime = sdfDate.format(now);
             ContentValues cv = new ContentValues();
             cv.put("_id", id);
             cv.put("score", String.valueOf(score));
@@ -108,33 +110,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             if (c != null) {
                 c.close();
             }
-        }
-        return resp;
-    }
-
-    public List<JSONObject> getStatisticList(Context ctx, String kw) {
-        SharedPreferences spf = ctx.getSharedPreferences("user", MODE_PRIVATE);
-        SQLiteDatabase db = this.getReadableDatabase();
-        List<JSONObject> resp = new ArrayList<>();
-        Cursor c = null;
-        String _id = spf.getString("idUser", "");
-        String sql = "SELECT * FROM statisticTABLE WHERE _id = '" + _id + "' and dateTime like '%+kw+%' Order by score desc LIMIT 5";
-        Log.d("StatisticLog", sql);
-        try {
-            c = db.rawQuery(sql, null);
-            if (c.moveToFirst()) {
-                do {
-                    JSONObject obj = new JSONObject();
-                    obj.put("_id", c.getString(c.getColumnIndex("_id")));
-                    obj.put("score", c.getString(c.getColumnIndex("score")));
-                    obj.put("dateTime", c.getString(c.getColumnIndex("dateTime")));
-                    resp.add(obj);
-                } while (c.moveToNext());
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        } finally {
-            //c.close();
         }
         return resp;
     }

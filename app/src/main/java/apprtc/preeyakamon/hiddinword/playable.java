@@ -60,6 +60,11 @@ public class playable extends ActionBarActivity {
         levelTextView.setText("Level " + Integer.toString(currentLevel));
         timeTextView.setText(String.valueOf(timeInts[intIndex]));
 
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            scoreTotal = bundle.containsKey("total") ? bundle.getInt("total", 0) : 0;
+        }
+
         init_view();
         Read_Question();
 
@@ -73,6 +78,13 @@ public class playable extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 onClickDel();
+            }
+        });
+
+        (findViewById(R.id.btnCLE_p)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (txtAnswer != null) txtAnswer.setText("");
             }
         });
     }
@@ -217,12 +229,14 @@ public class playable extends ActionBarActivity {
                 int[] ints = new int[]{1, 1, 1}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
                 scoreAnInt += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
                 scoreTotal += 1;
+                Log.d("PointOfAnswer", "point: " + scoreTotal);
                 if (scoreAnInt == ints[intIndex]) {
                     if (intIndex == 2) {
                         Intent intent = new Intent(playable.this, Success.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                         intent.putExtra("score", scoreTotal);
                         startActivity(intent);
+                        finish();
                     }   // if
                     intIndex += 1;
                     currentLevel += 1;
@@ -300,6 +314,7 @@ public class playable extends ActionBarActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = getIntent();
                 intent.putExtra("Index", "หมดเวลาแล้ว ต้องทำเร็วกว่านี้หน่อยนะ".equalsIgnoreCase(strTitle) ? intIndex : intIndex + 1);
+                intent.putExtra("total", scoreTotal);
                 startActivity(intent);
                 dialogInterface.dismiss();
                 finish();
