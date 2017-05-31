@@ -107,7 +107,10 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
 
             SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
             SharedPreferences.Editor editor = spf.edit();
+            editor.putString("id", loginStrings[0]);
             editor.putString("idUser", userString);
+            editor.putString("idName", loginStrings[1]);
+            editor.putString("pass", loginStrings[3]);
             editor.apply();
 
             if (userCheckLevel()) {

@@ -40,6 +40,13 @@ public class Menu extends ActionBarActivity {
                 }
             }
         });
+
+        (findViewById(R.id.imgchange)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Menu.this, ChangePersonal.class));
+            }
+        });
     }
 
 }
