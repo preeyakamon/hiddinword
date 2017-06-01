@@ -47,10 +47,11 @@ public class Statistic extends ActionBarActivity {
                     try {
                         for (int j = 0; j < data.size(); j++) {
                             JSONObject item = data.get(j);
+                            String name = item.getString("_id");
                             String value = item.getString("dateTime");
-                            if (value.indexOf(String.valueOf(charSequence)) > -1) {
+                            if (value.indexOf(String.valueOf(charSequence)) > -1 || name.indexOf(String.valueOf(charSequence)) > -1) {
                                 Map<String, String> map = new HashMap<>();
-                                map.put("title", "แต้มที่ได้ " + item.getString("score"));
+                                map.put("title", item.getString("_id") + " แต้มที่ได้ " + item.getString("score"));
                                 map.put("date", "เมื่อวันที่ " + item.getString("dateTime"));
                                 mapList.add(map);
                             }
@@ -83,7 +84,7 @@ public class Statistic extends ActionBarActivity {
         try {
             for (int i = 0; i < list.size(); i++) {
                 Map<String, String> item = new HashMap<>();
-                item.put("title", "แต้มที่ได้ " + list.get(i).getString("score"));
+                item.put("title", list.get(i).getString("_id") + " แต้มที่ได้ " + list.get(i).getString("score"));
                 item.put("date", "เมื่อวันที่ " + list.get(i).getString("dateTime"));
                 originalData.add(item);
             }

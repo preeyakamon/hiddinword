@@ -55,6 +55,7 @@ public class Success extends ActionBarActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveStatistic();
                 Intent intent = new Intent(Success.this, Statistic.class);
                 startActivity(intent);
             }
@@ -99,6 +100,6 @@ public class Success extends ActionBarActivity {
         String _id = spf.getString("idUser", "");
         int score = getIntent().getExtras().getInt("score");
         db.insertStatistic(_id, score);
-        Log.d("SuccessLog", "ID: " + _id + ", Score: " + score);
+        Log.d("StatisticLog", "ID: " + _id + ", Score: " + score);
     }
 }
