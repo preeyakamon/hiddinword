@@ -55,7 +55,8 @@ public class Success extends ActionBarActivity {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent intent = new Intent(Success.this, Statistic.class);
+                startActivity(intent);
             }
         });
 

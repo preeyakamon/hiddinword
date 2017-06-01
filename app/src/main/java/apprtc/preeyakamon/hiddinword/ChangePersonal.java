@@ -1,6 +1,7 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
@@ -30,7 +31,7 @@ public class ChangePersonal extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 updatePlayTable(etName.getText().toString(), etPass.getText().toString());
-            }
+        }
         });
 
     }
