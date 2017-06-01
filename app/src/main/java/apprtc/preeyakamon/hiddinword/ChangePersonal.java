@@ -28,13 +28,16 @@ public class ChangePersonal extends ActionBarActivity {
         etPass.setText(spf.getString("pass", "null"));
 
         (findViewById(R.id.btnSave)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updatePlayTable(etName.getText().toString(), etPass.getText().toString());
+        @Override
+        public void onClick(View view) {
+            updatePlayTable(etName.getText().toString(), etPass.getText().toString());
+            Intent intent = new Intent(ChangePersonal.this, Authen.class);
+            startActivity(intent);
+            finish();
         }
-        });
+    });
 
-    }
+}
 
 
     public void updatePlayTable(String name, String password) {

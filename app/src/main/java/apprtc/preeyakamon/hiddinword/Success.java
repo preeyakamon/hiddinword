@@ -60,7 +60,6 @@ public class Success extends ActionBarActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     public void onResetLevel(){
