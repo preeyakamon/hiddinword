@@ -27,7 +27,8 @@
         <activity android:name=".Statistic" />
         <activity android:name=".Menu" />
         <activity android:name=".playable" />
-        <activity android:name=".ChangePersonal"></activity>
+        <activity android:name=".ChangePersonal" />
+        <activity android:name=".UserList"></activity>
     </application>
 
 </manifest>

@@ -77,8 +77,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             cv.put("score", String.valueOf(score));
             cv.put("dateTime", dateTime);
             Long l = db.insert("statisticTABLE", null, cv);
-            Log.d("StatisticLog", "Inserted: " + cv.toString());
-            Log.d("StatisticLog", "Inserted: " + l);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -110,6 +108,56 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             if (c != null) {
                 c.close();
             }
+        }
+        return resp;
+    }
+
+    public List<JSONObject> getUserList(Context ctx) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        List<JSONObject> resp = new ArrayList<>();
+        Cursor c = null;
+        String sql = "SELECT * FROM userTABLE";
+        try {
+            c = db.rawQuery(sql, null);
+            Log.d("StatisticLog", "Cursor Size: " + c.getCount());
+            while (c.moveToNext()) {
+                JSONObject obj = new JSONObject();
+                obj.put("_id", c.getString(c.getColumnIndex("_id")));
+                obj.put("Name", c.getString(c.getColumnIndex("Name")));
+                obj.put("User", c.getString(c.getColumnIndex("User")));
+                obj.put("Password", c.getString(c.getColumnIndex("Password")));
+                resp.add(obj);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+        }
+        return resp;
+    }
+
+    public boolean removeUser(String id, String idUser) {
+        boolean resp = false;
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.beginTransaction();
+            int user = db.delete("userTABLE", " _id = ?", new String[]{id});
+            int play = db.delete("playTABLE", "idUser = ?", new String[]{idUser});
+            int stat = db.delete("statisticTABLE", "_id = ?", new String[]{idUser});
+            Log.d("StatisticLog", "User: " + user);
+            Log.d("StatisticLog", "Play: " + play);
+            Log.d("StatisticLog", "Stat: " + stat);
+            if (user > 0) {
+                resp = true;
+            }
+            db.setTransactionSuccessful();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            resp = false;
+        } finally {
+            db.endTransaction();
         }
         return resp;
     }

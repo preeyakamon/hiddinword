@@ -42,7 +42,7 @@ public class play extends ActionBarActivity {
         timeTextView = (TextView) findViewById(R.id.textView6);
 
 
-        intIndex = myFindIndex();
+        intIndex = myFindIndex()-1;
 
 
         //Show TextView
@@ -55,7 +55,7 @@ public class play extends ActionBarActivity {
         timeTextView.setText(Integer.toString(timeInts[intIndex >= 3 ? 2 : intIndex]) + " sec");
 
         // Update playTABLE ส่ง intIndex + 1 เข้าไปอัพเดท
-        //updatePlayTable(intIndex +1);
+        updatePlayTable(intIndex +1);
 
         init_view();
         Read_Question();
