@@ -90,7 +90,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         List<JSONObject> resp = new ArrayList<>();
         Cursor c = null;
         String _id = spf.getString("idUser", "");
-        String sql = "SELECT * FROM statisticTABLE WHERE _id = '" + _id + "' Order by score desc LIMIT 5";
+//        String sql = "SELECT * FROM statisticTABLE WHERE _id = '" + _id + "' Order by score desc LIMIT 10";
+        String sql = "SELECT * FROM statisticTABLE Order by score desc LIMIT 10";
         Log.d("StatisticLog", sql);
         try {
             c = db.rawQuery(sql, null);
@@ -146,9 +147,9 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             int user = db.delete("userTABLE", " _id = ?", new String[]{id});
             int play = db.delete("playTABLE", "idUser = ?", new String[]{idUser});
             int stat = db.delete("statisticTABLE", "_id = ?", new String[]{idUser});
-            Log.d("StatisticLog", "User: " + user);
-            Log.d("StatisticLog", "Play: " + play);
-            Log.d("StatisticLog", "Stat: " + stat);
+//            Log.d("StatisticLog", "User: " + user);
+//            Log.d("StatisticLog", "Play: " + play);
+//            Log.d("StatisticLog", "Stat: " + stat);
             if (user > 0) {
                 resp = true;
             }
