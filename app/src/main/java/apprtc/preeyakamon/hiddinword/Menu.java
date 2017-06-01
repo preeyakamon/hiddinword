@@ -1,6 +1,9 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,8 +31,7 @@ public class Menu extends ActionBarActivity {
         imgplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean test = getIntent().getExtras().getBoolean("test", false);
-                if (test) {
+                if (userCheckLevel()) {
                     Intent intent = new Intent(Menu.this, TestLevel.class);
                     startActivity(intent);
                     finish();
@@ -48,5 +50,31 @@ public class Menu extends ActionBarActivity {
             }
         });
     }
+
+    private boolean userCheckLevel() {
+
+        boolean result = false;
+
+        try {
+            SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+            SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                    MODE_PRIVATE, null);
+            String rawQuery = String.format("SELECT * FROM playTABLE WHERE idUSER = \"%s\"",
+                    spf.getString("idUser", ""));
+            Cursor cursor = sqLiteDatabase.rawQuery(rawQuery, null);
+            cursor.moveToFirst();
+
+            if (cursor.getCount() == 0) {
+                return true;    // ฺไม่มีข้อมูล
+            } else {
+                return false;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }   // userCheck
 
 }
