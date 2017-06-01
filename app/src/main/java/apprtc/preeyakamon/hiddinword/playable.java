@@ -266,14 +266,15 @@ public class playable extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
-        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        alertDialog.setTitle("Confirm Exit");
+
+        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
             }
         });
-        alertDialog.setNegativeButton("Cancel", null);
+        alertDialog.setNegativeButton("No", null);
         alertDialog.show();
     }
 
@@ -344,4 +345,5 @@ public class playable extends ActionBarActivity {
         Log.d("PlayLog", "Level : " + level + ", Updated: " + updated);
         Log.d("PlayLog", "idUser: " + spf.getString("idUser", ""));
     }
+
 }
