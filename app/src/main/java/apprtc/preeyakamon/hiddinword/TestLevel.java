@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,11 +23,12 @@ public class TestLevel extends ActionBarActivity {
 
     //Explicit
     private MediaPlayer soundRadio;
-    private TextView txtAnswer, txtQuestion, timeTextView;
+    private TextView txtAnswer, txtQuestion, timeTextView, tvScore;
     private TypedArray arrQuest;
     private int Quest_Item, timeAnInt = 60, scoreAnInt = 0;
     private String[] Quest, Ans, len_ans;
     private boolean aBoolean = true;
+    private Button btnSkip;
 
     Random rndQuest = new Random();
 
@@ -36,6 +38,7 @@ public class TestLevel extends ActionBarActivity {
         setContentView(R.layout.activity_test_level);
 
         timeTextView = (TextView) findViewById(R.id.textView5);
+        btnSkip = (Button) findViewById(R.id.btnSkip);
 
         init_view();
         Read_Question();
@@ -46,10 +49,20 @@ public class TestLevel extends ActionBarActivity {
 
         myLoop();
 
+        tvScore = (TextView) findViewById(R.id.tvScore);
+        tvScore.setText("คะแนน " + scoreAnInt);
+
         (findViewById(R.id.btnDle)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onClickDel();
+            }
+        });
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Quest_Item = rndQuest.nextInt(250) + 1;
+                Screen_Refresh();
             }
         });
 
@@ -230,6 +243,7 @@ public class TestLevel extends ActionBarActivity {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
 
                 scoreAnInt += 1;
+                tvScore.setText("คะแนน " + scoreAnInt);
                 Log.d("3febV1", "Score ==> " + scoreAnInt);
 
                 soundRadio = MediaPlayer.create(getBaseContext(), R.raw.jetsons1);

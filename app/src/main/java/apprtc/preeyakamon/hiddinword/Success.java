@@ -11,15 +11,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Success extends ActionBarActivity {
 
     Button btnBack, btnExit;
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success);
+
+        score = getIntent().getExtras().getInt("score");
+        ((TextView)findViewById(R.id.tvScore)).setText("รวม " + score + " คะแนน");
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +103,7 @@ public class Success extends ActionBarActivity {
         MyOpenHelper db = new MyOpenHelper(Success.this);
         SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
         String _id = spf.getString("idUser", "");
-        int score = getIntent().getExtras().getInt("score");
+
         db.insertStatistic(_id, score);
         Log.d("StatisticLog", "ID: " + _id + ", Score: " + score);
     }

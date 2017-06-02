@@ -35,6 +35,8 @@ public class playable extends ActionBarActivity {
     private Random rndQuest = new Random();
     private int[] timeInts;
     private boolean aBoolean = true;
+    private TextView tvScore;
+    int[] ints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,10 @@ public class playable extends ActionBarActivity {
         // Binding Widget.
         levelTextView = (TextView) findViewById(R.id.textView7);
         timeTextView = (TextView) findViewById(R.id.textView6);
+        tvScore = (TextView) findViewById(R.id.tvScore);
 
         // initial.
+        ints = new int[]{10, 20, 30}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
         timeInts = new int[]{300, 240, 180};
 
         // get Level i.e. 1, 2 or 3
@@ -72,6 +76,15 @@ public class playable extends ActionBarActivity {
         Quest_Item = rndQuest.nextInt(250) + 1;
         Screen_Refresh();
         countDownTime();
+
+        tvScore.setText(scoreAnInt + "/" + ints[intIndex]);
+        (findViewById(R.id.btnSkip)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Quest_Item = rndQuest.nextInt(250) + 1;
+                Screen_Refresh();
+            }
+        });
 
         // กดปุ่ม Del.
         (findViewById(R.id.btnDle_p)).setOnClickListener(new View.OnClickListener() {
@@ -226,9 +239,9 @@ public class playable extends ActionBarActivity {
             final String correct = Ans[Quest_Item - 1];
             if (ans.equalsIgnoreCase(correct)) { // ตอบถูก
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + ans, Toast.LENGTH_SHORT).show();
-                int[] ints = new int[]{10, 20, 30}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
                 scoreAnInt += 1; // + คะแนน เพื่อเอาไปตรวจสอบว่าตอบครบหรือยัง
                 scoreTotal += 1;
+                tvScore.setText(scoreAnInt + "/" + ints[intIndex]);
                 Log.d("PointOfAnswer", "point: " + scoreTotal);
                 if (scoreAnInt == ints[intIndex]) {
                     if (intIndex == 2) {

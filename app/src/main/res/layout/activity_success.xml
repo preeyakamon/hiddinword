@@ -31,4 +31,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="สถิตการเล่น" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="135dp"
+        android:text="รวม 0 คะแนน"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 </RelativeLayout>

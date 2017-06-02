@@ -1,321 +1,323 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game1"
+    android:focusable="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="apprtc.preeyakamon.hiddinword.play"
-    android:focusable="false"
-    android:id="@+id/activity_play"
-    android:background="@drawable/game1">
+    tools:context="apprtc.preeyakamon.hiddinword.play">
 
     <FrameLayout
+        android:id="@+id/all"
         android:layout_width="350dp"
         android:layout_height="260dp"
-        android:layout_marginTop="280dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/all">
+        android:layout_marginTop="280dp">
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="Q"
             android:id="@+id/btnQ"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="W"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="Q"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnW"
-            android:layout_marginLeft="50dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="E"
+            android:layout_marginLeft="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="W"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnE"
-            android:layout_marginLeft="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="R"
+            android:layout_marginLeft="100dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="E"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnR"
-            android:layout_marginLeft="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="T"
+            android:layout_marginLeft="150dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="R"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnT"
-            android:layout_marginLeft="200dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="Y"
+            android:layout_marginLeft="200dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="T"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnY"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="U"
+            android:layout_marginLeft="250dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="Y"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnU"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="I"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="150dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="U"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnI"
-            android:layout_marginTop="50dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="O"
+            android:layout_marginTop="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="I"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnO"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="50dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="P"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="O"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnP"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="A"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="P"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnA"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="S"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="A"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnS"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="200dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="D"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="50dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="S"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnD"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="250dp"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="D"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="F"
             android:id="@+id/btnF"
-            android:layout_marginTop="150dp"
-            android:layout_marginLeft="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="G"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="150dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnG"
-            android:layout_marginTop="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="H"
+            android:layout_marginTop="100dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="G"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnH"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="50dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="J"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="100dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="H"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnJ"
-            android:layout_marginTop="100dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="J"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="K"
             android:id="@+id/btnK"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="L"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="100dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="K"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnL"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="200dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="Z"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="100dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="L"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnZ"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="250dp"
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="Z"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="X"
             android:id="@+id/btnX"
-            android:layout_marginTop="150dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="X"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="C"
             android:id="@+id/btnC"
-            android:layout_marginTop="150dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="250dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="V"
             android:id="@+id/btnV"
-            android:layout_marginTop="150dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="B"
+            android:layout_marginTop="150dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="V"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/btnB"
-            android:layout_marginTop="150dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="200dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="B"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:text="N"
             android:id="@+id/btnN"
-            android:layout_marginTop="200dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
-
-        <Button
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:text="M"
-            android:id="@+id/btnM"
             android:layout_marginTop="200dp"
-            android:layout_marginLeft="50dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex" />
+            android:onClick="onClickTex"
+            android:text="N"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnM"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="200dp"
+            android:background="#ffffc2e8"
+            android:onClick="onClickTex"
+            android:text="M"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnDle"
@@ -330,49 +332,72 @@
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/btnCLE"
             android:layout_width="90dp"
             android:layout_height="45dp"
-            android:text="Clear"
-            android:id="@+id/btnCLE"
-            android:layout_marginTop="203dp"
             android:layout_marginLeft="170dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_marginTop="203dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickClear" />
+            android:onClick="onClickClear"
+            android:text="Clear"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </FrameLayout>
 
     <TextView
+        android:id="@+id/txtAns"
+        style="@style/Base.TextAppearance.AppCompat.Large"
         android:layout_width="230dp"
         android:layout_height="50dp"
-        android:id="@+id/txtAns"
-        android:layout_marginTop="210dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="210dp"
         android:background="#ffeeffb4"
-        style="@style/Base.TextAppearance.AppCompat.Large"
         android:gravity="center_horizontal" />
 
     <TextView
+        android:id="@+id/txtQuest"
         android:layout_width="270dp"
         android:layout_height="100dp"
-        android:text=""
-        android:id="@+id/txtQuest"
         android:layout_alignParentTop="false"
-        android:layout_marginTop="85dp"
         android:layout_marginLeft="30dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
+        android:layout_marginTop="85dp"
+        android:background="#ffffbea5"
         android:gravity="center_vertical|center_horizontal"
-        android:background="#ffffbea5" />
+        android:text=""
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:text="60 Sec"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5"
+        android:layout_alignParentRight="true"
+        android:text="60 Sec"
         android:textSize="36sp"
-        android:textStyle="normal|bold"
-        android:layout_alignParentRight="true" />
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="32dp"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/txtQuest"
+        android:layout_alignStart="@+id/txtQuest" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvScore"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="ข้าม" />
 
 </RelativeLayout>
