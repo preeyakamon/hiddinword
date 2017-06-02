@@ -49,7 +49,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/loge" />
+            android:src="@drawable/log" />
 
         <EditText
             android:id="@+id/editText4"
@@ -70,11 +70,11 @@
 
     <ImageButton
         android:id="@+id/imglist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:background="@null"
-        android:src="@drawable/setting" />
+        android:src="@drawable/show2" />
 </RelativeLayout>

@@ -28,7 +28,6 @@ public class TestLevel extends ActionBarActivity {
     private String[] Quest, Ans, len_ans;
     private boolean aBoolean = true;
 
-
     Random rndQuest = new Random();
 
     @Override

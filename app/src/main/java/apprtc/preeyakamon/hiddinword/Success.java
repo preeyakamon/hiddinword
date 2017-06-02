@@ -58,6 +58,7 @@ public class Success extends ActionBarActivity {
                 saveStatistic();
                 Intent intent = new Intent(Success.this, Statistic.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -80,7 +81,8 @@ public class Success extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        saveStatistic();
+
+       /* saveStatistic();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -90,7 +92,7 @@ public class Success extends ActionBarActivity {
             }
         });
         alertDialog.setNegativeButton("Cancel", null);
-        alertDialog.show();
+        alertDialog.show(); */
     }
 
     public void saveStatistic() {
