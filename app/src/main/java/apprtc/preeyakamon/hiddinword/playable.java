@@ -346,4 +346,5 @@ public class playable extends ActionBarActivity {
         Log.d("PlayLog", "idUser: " + spf.getString("idUser", ""));
     }
 
+
 }

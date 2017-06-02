@@ -30,7 +30,7 @@ public class Success extends ActionBarActivity {
                     @Override
                     public void run() {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Success.this);
-                        alertDialog.setTitle("ระบบได้บันทึกข้อมูลของคุณเรียบร้อยแล้ว คุณต้องการบันทึกระดับของคุณ เพื่อกลับไปเล่นหน้าใหม่หรือไม่ ?");
+                        alertDialog.setTitle("คุณต้องการบันทึกระดับของคุณ เพื่อกลับไปเล่นหน้าใหม่หรือไม่ ?");
                         alertDialog.setPositiveButton("บันทึก", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -81,8 +81,7 @@ public class Success extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-
-       /* saveStatistic();
+       saveStatistic();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -92,7 +91,7 @@ public class Success extends ActionBarActivity {
             }
         });
         alertDialog.setNegativeButton("Cancel", null);
-        alertDialog.show(); */
+        alertDialog.show();
     }
 
     public void saveStatistic() {

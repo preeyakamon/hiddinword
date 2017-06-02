@@ -16,8 +16,7 @@ import android.widget.Toast;
 public class Authen extends ActionBarActivity implements View.OnClickListener {
 
     //Explicit
-    private Button signInButton, signUpButton;
-    private ImageButton imglist;
+    private Button signInButton, signUpButton, ButtonShowUser;
     private MyManage myManage;
     private EditText userEditText, passwordEditText;
     private String userString, passwordString;
@@ -55,8 +54,8 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
         signUpButton = (Button) findViewById(R.id.button2);
         userEditText = (EditText) findViewById(R.id.editText4);
         passwordEditText = (EditText) findViewById(R.id.editText5);
-        imglist = (ImageButton) findViewById(R.id.imglist);
-        imglist.setOnClickListener(new View.OnClickListener() {
+        ButtonShowUser = (Button) findViewById(R.id.button3);
+        ButtonShowUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Authen.this, UserList.class));

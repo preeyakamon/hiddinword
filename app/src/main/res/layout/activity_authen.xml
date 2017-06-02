@@ -28,6 +28,13 @@
             android:text="Sign IN" />
 
         <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ShowUser" />
+
+        <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,13 +75,4 @@
             android:inputType="textPassword" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imglist"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="@null"
-        android:src="@drawable/show2" />
 </RelativeLayout>
