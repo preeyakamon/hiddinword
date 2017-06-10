@@ -15,8 +15,8 @@
     <string name="message_noData">กรุณา สมัครสมาชิก</string>
     <string name="title_userFalse">ไม่มี User นี่้</string>
     <string name="message_userFalse">ไม่มี User นี่ในฐานข้อมูล SQLite</string>
-    <string name="title_passFalse">Password False</string>
-    <string name="message_passFalse">ลองใหม่ Password ผิด</string>
+    <string name="title_passFalse">ข้อมูลผิดพลาด</string>
+    <string name="message_passFalse">กรุณาใส่ Username หรือ Password ให้ถูกต้อง</string>
     <string name="title_activity_showscore">showscore</string>
 
 

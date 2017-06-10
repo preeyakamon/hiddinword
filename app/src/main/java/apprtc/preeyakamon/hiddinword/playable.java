@@ -12,9 +12,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,8 @@ public class playable extends ActionBarActivity {
     private int[] timeInts;
     private boolean aBoolean = true;
     private TextView tvScore;
+    EditText etAns_p;
+
     int[] ints;
 
     @Override
@@ -49,7 +53,7 @@ public class playable extends ActionBarActivity {
         tvScore = (TextView) findViewById(R.id.tvScore);
 
         // initial.
-        ints = new int[]{10, 20, 30}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
+        ints = new int[]{10, 20, 3}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
         timeInts = new int[]{300, 240, 180};
 
         // get Level i.e. 1, 2 or 3
@@ -100,11 +104,29 @@ public class playable extends ActionBarActivity {
                 if (txtAnswer != null) txtAnswer.setText("");
             }
         });
+
+        etAns_p.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                onClickText(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
     private void init_view() {
         txtQuestion = (TextView) findViewById(R.id.txtQuest_p);
         txtAnswer = (TextView) findViewById(R.id.txtAns_p);
+        etAns_p = (EditText) findViewById(R.id.etAns_p) ;
 
         Quest = new String[250];
         Ans = new String[250];
@@ -150,92 +172,97 @@ public class playable extends ActionBarActivity {
         }
     }
 
-    public void onClickTex(View view) {
-        switch (view.getId()) {
-            case R.id.btnA_p:
-                txtAnswer.append("A");
-                break;
-            case R.id.btnB_p:
-                txtAnswer.append("B");
-                break;
-            case R.id.btnC_p:
-                txtAnswer.append("C");
-                break;
-            case R.id.btnD_p:
-                txtAnswer.append("D");
-                break;
-            case R.id.btnE_p:
-                txtAnswer.append("E");
-                break;
-            case R.id.btnF_p:
-                txtAnswer.append("F");
-                break;
-            case R.id.btnG_p:
-                txtAnswer.append("G");
-                break;
-            case R.id.btnH_p:
-                txtAnswer.append("H");
-                break;
-            case R.id.btnI_p:
-                txtAnswer.append("I");
-                break;
-            case R.id.btnJ_p:
-                txtAnswer.append("J");
-                break;
-            case R.id.btnK_p:
-                txtAnswer.append("K");
-                break;
-            case R.id.btnL_p:
-                txtAnswer.append("L");
-                break;
-            case R.id.btnM_p:
-                txtAnswer.append("M");
-                break;
-            case R.id.btnN_p:
-                txtAnswer.append("N");
-                break;
-            case R.id.btnO_p:
-                txtAnswer.append("O");
-                break;
-            case R.id.btnP_p:
-                txtAnswer.append("P");
-                break;
-            case R.id.btnQ_p:
-                txtAnswer.append("Q");
-                break;
-            case R.id.btnR_p:
-                txtAnswer.append("R");
-                break;
-            case R.id.btnS_p:
-                txtAnswer.append("S");
-                break;
-            case R.id.btnT_p:
-                txtAnswer.append("T");
-                break;
-            case R.id.btnU_p:
-                txtAnswer.append("U");
-                break;
-            case R.id.btnV_p:
-                txtAnswer.append("V");
-                break;
-            case R.id.btnW_p:
-                txtAnswer.append("W");
-                break;
-            case R.id.btnX_p:
-                txtAnswer.append("X");
-                break;
-            case R.id.btnY_p:
-                txtAnswer.append("Y");
-                break;
-            case R.id.btnZ_p:
-                txtAnswer.append("Z");
-                break;
+    public void onClickText(View view) {
+        if (view != null) {
+            switch (view.getId()) {
+                case R.id.btnA_p:
+                    txtAnswer.append("A");
+                    break;
+                case R.id.btnB_p:
+                    txtAnswer.append("B");
+                    break;
+                case R.id.btnC_p:
+                    txtAnswer.append("C");
+                    break;
+                case R.id.btnD_p:
+                    txtAnswer.append("D");
+                    break;
+                case R.id.btnE_p:
+                    txtAnswer.append("E");
+                    break;
+                case R.id.btnF_p:
+                    txtAnswer.append("F");
+                    break;
+                case R.id.btnG_p:
+                    txtAnswer.append("G");
+                    break;
+                case R.id.btnH_p:
+                    txtAnswer.append("H");
+                    break;
+                case R.id.btnI_p:
+                    txtAnswer.append("I");
+                    break;
+                case R.id.btnJ_p:
+                    txtAnswer.append("J");
+                    break;
+                case R.id.btnK_p:
+                    txtAnswer.append("K");
+                    break;
+                case R.id.btnL_p:
+                    txtAnswer.append("L");
+                    break;
+                case R.id.btnM_p:
+                    txtAnswer.append("M");
+                    break;
+                case R.id.btnN_p:
+                    txtAnswer.append("N");
+                    break;
+                case R.id.btnO_p:
+                    txtAnswer.append("O");
+                    break;
+                case R.id.btnP_p:
+                    txtAnswer.append("P");
+                    break;
+                case R.id.btnQ_p:
+                    txtAnswer.append("Q");
+                    break;
+                case R.id.btnR_p:
+                    txtAnswer.append("R");
+                    break;
+                case R.id.btnS_p:
+                    txtAnswer.append("S");
+                    break;
+                case R.id.btnT_p:
+                    txtAnswer.append("T");
+                    break;
+                case R.id.btnU_p:
+                    txtAnswer.append("U");
+                    break;
+                case R.id.btnV_p:
+                    txtAnswer.append("V");
+                    break;
+                case R.id.btnW_p:
+                    txtAnswer.append("W");
+                    break;
+                case R.id.btnX_p:
+                    txtAnswer.append("X");
+                    break;
+                case R.id.btnY_p:
+                    txtAnswer.append("Y");
+                    break;
+                case R.id.btnZ_p:
+                    txtAnswer.append("Z");
+                    break;
+
+            }
         }
 
         int lenAns = String.valueOf(txtAnswer.getText()).length();
+        //int lenAns = String.valueOf(etAns_p.getText()).length();
         int lenCorrect = Integer.valueOf(len_ans[Quest_Item - 1]);
         if (lenAns == lenCorrect) {
             final String ans = txtAnswer.getText().toString();
+            //final String ans = etAns_p.getText().toString();
             final String correct = Ans[Quest_Item - 1];
             if (ans.equalsIgnoreCase(correct)) { // ตอบถูก
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ " + ans, Toast.LENGTH_SHORT).show();

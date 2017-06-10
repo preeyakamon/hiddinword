@@ -12,25 +12,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
         android:ems="10"
+        android:visibility="gone"
         android:inputType="text|textPersonName"
         android:text="Name"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="39dp"
-        android:layout_marginEnd="39dp" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/etPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etName"
-        android:layout_alignStart="@+id/etName"
-        android:layout_below="@+id/etName"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:text="password" />
+        android:text="password"
+        android:layout_below="@+id/etName"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnSave"
@@ -46,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/etPass"
+        android:visibility="gone"
         android:layout_marginBottom="11dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"

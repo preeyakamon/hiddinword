@@ -1,17 +1,22 @@
 package apprtc.preeyakamon.hiddinword;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +36,7 @@ public class TestLevel extends ActionBarActivity {
     private Button btnSkip;
 
     Random rndQuest = new Random();
+    EditText etAns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,23 @@ public class TestLevel extends ActionBarActivity {
             public void onClick(View view) {
                 Quest_Item = rndQuest.nextInt(250) + 1;
                 Screen_Refresh();
+            }
+        });
+
+        etAns.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                onClickText(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
 
@@ -124,6 +147,7 @@ public class TestLevel extends ActionBarActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 addLevelToSQLite(level);
+                onUpdateLevel(level);
 
                 Intent intent = new Intent(TestLevel.this, playable.class);
                 intent.putExtra("Index", level);
@@ -152,94 +176,98 @@ public class TestLevel extends ActionBarActivity {
 
     }
 
-    public void onClickTex(View view) {
-        switch (view.getId()) {
-            case R.id.btnA:
-                txtAnswer.append("A");
-                break;
-            case R.id.btnB:
-                txtAnswer.append("B");
-                break;
-            case R.id.btnC:
-                txtAnswer.append("C");
-                break;
-            case R.id.btnD:
-                txtAnswer.append("D");
-                break;
-            case R.id.btnE:
-                txtAnswer.append("E");
-                break;
-            case R.id.btnF:
-                txtAnswer.append("F");
-                break;
-            case R.id.btnG:
-                txtAnswer.append("G");
-                break;
-            case R.id.btnH:
-                txtAnswer.append("H");
-                break;
-            case R.id.btnI:
-                txtAnswer.append("I");
-                break;
-            case R.id.btnJ:
-                txtAnswer.append("J");
-                break;
-            case R.id.btnK:
-                txtAnswer.append("K");
-                break;
-            case R.id.btnL:
-                txtAnswer.append("L");
-                break;
-            case R.id.btnM:
-                txtAnswer.append("M");
-                break;
-            case R.id.btnN:
-                txtAnswer.append("N");
-                break;
-            case R.id.btnO:
-                txtAnswer.append("O");
-                break;
-            case R.id.btnP:
-                txtAnswer.append("P");
-                break;
-            case R.id.btnQ:
-                txtAnswer.append("Q");
-                break;
-            case R.id.btnR:
-                txtAnswer.append("R");
-                break;
-            case R.id.btnS:
-                txtAnswer.append("S");
-                break;
-            case R.id.btnT:
-                txtAnswer.append("T");
-                break;
-            case R.id.btnU:
-                txtAnswer.append("U");
-                break;
-            case R.id.btnV:
-                txtAnswer.append("V");
-                break;
-            case R.id.btnW:
-                txtAnswer.append("W");
-                break;
-            case R.id.btnX:
-                txtAnswer.append("X");
-                break;
-            case R.id.btnY:
-                txtAnswer.append("Y");
-                break;
-            case R.id.btnZ:
-                txtAnswer.append("Z");
-                break;
-        }   // switch
+    public void onClickText(View view) {
+        if (view != null) {
+            switch (view.getId()) {
+                case R.id.btnA:
+                    txtAnswer.append("A");
+                    break;
+                case R.id.btnB:
+                    txtAnswer.append("B");
+                    break;
+                case R.id.btnC:
+                    txtAnswer.append("C");
+                    break;
+                case R.id.btnD:
+                    txtAnswer.append("D");
+                    break;
+                case R.id.btnE:
+                    txtAnswer.append("E");
+                    break;
+                case R.id.btnF:
+                    txtAnswer.append("F");
+                    break;
+                case R.id.btnG:
+                    txtAnswer.append("G");
+                    break;
+                case R.id.btnH:
+                    txtAnswer.append("H");
+                    break;
+                case R.id.btnI:
+                    txtAnswer.append("I");
+                    break;
+                case R.id.btnJ:
+                    txtAnswer.append("J");
+                    break;
+                case R.id.btnK:
+                    txtAnswer.append("K");
+                    break;
+                case R.id.btnL:
+                    txtAnswer.append("L");
+                    break;
+                case R.id.btnM:
+                    txtAnswer.append("M");
+                    break;
+                case R.id.btnN:
+                    txtAnswer.append("N");
+                    break;
+                case R.id.btnO:
+                    txtAnswer.append("O");
+                    break;
+                case R.id.btnP:
+                    txtAnswer.append("P");
+                    break;
+                case R.id.btnQ:
+                    txtAnswer.append("Q");
+                    break;
+                case R.id.btnR:
+                    txtAnswer.append("R");
+                    break;
+                case R.id.btnS:
+                    txtAnswer.append("S");
+                    break;
+                case R.id.btnT:
+                    txtAnswer.append("T");
+                    break;
+                case R.id.btnU:
+                    txtAnswer.append("U");
+                    break;
+                case R.id.btnV:
+                    txtAnswer.append("V");
+                    break;
+                case R.id.btnW:
+                    txtAnswer.append("W");
+                    break;
+                case R.id.btnX:
+                    txtAnswer.append("X");
+                    break;
+                case R.id.btnY:
+                    txtAnswer.append("Y");
+                    break;
+                case R.id.btnZ:
+                    txtAnswer.append("Z");
+                    break;
+            }   // switch
+       }
 
         int len1 = String.valueOf(txtAnswer.getText()).length();
+        //int len1 = String.valueOf(etAns.getText()).length();
         int len2 = Integer.valueOf(len_ans[Quest_Item - 1]);
         if (len1 == len2) {
             String txt1 = String.valueOf(txtAnswer.getText());
+           // String txt1 = String.valueOf(etAns.getText());
             String txt2 = Ans[Quest_Item - 1];
-            if (txt1.equals(txt2)) {
+            if (txt1.equalsIgnoreCase(txt2)) {
                 Toast.makeText(getApplicationContext(), "ถูกต้องแล้วค่ะ" + txt1, Toast.LENGTH_LONG).show();
 
                 scoreAnInt += 1;
@@ -277,6 +305,7 @@ public class TestLevel extends ActionBarActivity {
     private void init_view() {
         txtQuestion = (TextView) findViewById(R.id.txtQuest);
         txtAnswer = (TextView) findViewById(R.id.txtAns);
+        etAns = (EditText) findViewById(R.id.etAns);
 
         Quest = new String[250];
         Ans = new String[250];
@@ -299,6 +328,7 @@ public class TestLevel extends ActionBarActivity {
     private void Screen_Refresh() {
         txtQuestion.setText(Quest[Quest_Item - 1]);
         txtAnswer.setText("");
+        etAns.setText("");
     }
 
 
@@ -339,5 +369,14 @@ public class TestLevel extends ActionBarActivity {
                 txtAnswer.setText(ans); // ในค่าลงไปใน TextView เหมือนเดิม
             }
         }
+    }
+
+    public void onUpdateLevel(int level){
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
+                MODE_PRIVATE, null);
+        SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
+        ContentValues data = new ContentValues();
+        data.put("Level", String.valueOf(level));
+        sqLiteDatabase.update("playTABLE", data, "idUser = '" + spf.getString("idUser", "") + "'", null);
     }
 }

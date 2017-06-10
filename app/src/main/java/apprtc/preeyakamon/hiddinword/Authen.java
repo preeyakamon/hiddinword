@@ -133,8 +133,6 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
                 startActivity(intent);
                 finish();
             }
-
-
         }
 
 
@@ -145,7 +143,6 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
         boolean result = false;
 
         try {
-
             SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.database_name,
                     MODE_PRIVATE, null);
             String rawQuery = String.format("SELECT * FROM playTABLE WHERE idUSER = \"%s\"",

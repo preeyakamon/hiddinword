@@ -43,13 +43,19 @@ public class SignUp extends ActionBarActivity {
                     myAlert.myDialog(R.drawable.icon1,
                             getResources().getString(R.string.title_haveSpace),
                             getResources().getString(R.string.message_hameSpace));
-
-                } else {
-                    //No Space
-                    MyManage myManage = new MyManage(SignUp.this);
-                    myManage.addValueToUserTable(nameString, userString, passwordString);
-                    Toast.makeText(SignUp.this, "Save User OK", Toast.LENGTH_SHORT).show();
-                    finish();
+                    } else {
+                        //No Space
+                        MyManage myManage = new MyManage(SignUp.this);
+                        if(myManage.checkDuplicateUser(userString) > 0) {
+                            MyAlert myAlert = new MyAlert(SignUp.this);
+                            myAlert.myDialog(R.drawable.icon1,
+                                    "Usernameซ้ำ ",
+                                    "กรุณาใส่ใหม่ ");
+                        } else {
+                            myManage.addValueToUserTable(nameString, userString, passwordString);
+                            Toast.makeText(SignUp.this, "Save User OK", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
 
                 }   // if
 

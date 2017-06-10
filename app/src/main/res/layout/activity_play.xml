@@ -15,15 +15,16 @@
         android:id="@+id/all"
         android:layout_width="350dp"
         android:layout_height="260dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="280dp">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <Button
             android:id="@+id/btnQ_p"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Q"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -34,7 +35,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="W"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -45,7 +46,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="E"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -56,7 +57,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="200dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="T"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -67,7 +68,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="250dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Y"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -78,7 +79,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="I"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -90,7 +91,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="O"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -102,7 +103,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="P"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -114,7 +115,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="A"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -126,7 +127,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="S"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -138,7 +139,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="F"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -149,7 +150,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="G"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -161,7 +162,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="J"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -173,7 +174,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="K"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -185,7 +186,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Z"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -197,7 +198,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="X"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -209,7 +210,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="C"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -221,7 +222,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="B"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -232,7 +233,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="200dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="N"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -243,31 +244,20 @@
             android:layout_height="45dp"
             android:layout_marginLeft="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="R"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnCLE_p"
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="203dp"
+            android:layout_marginLeft="165dp"
+            android:layout_marginTop="200dp"
             android:background="@color/accent_material_dark"
             android:onClick="onClickClear"
             android:text="Clear"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-        <Button
-            android:id="@+id/btnDle_p"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="203dp"
-            android:background="@color/accent_material_dark"
-            android:onClick="onClickDel"
-            android:text="Del"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -278,7 +268,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="50dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="D"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -290,7 +280,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="H"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -301,7 +291,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="V"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -313,7 +303,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="150dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="U"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -325,7 +315,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="100dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="L"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -337,8 +327,20 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="200dp"
             android:background="@color/accent_material_dark"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="M"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDle_p"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="200dp"
+            android:background="@color/accent_material_dark"
+            android:onClick="onClickDel"
+            android:text="Del"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -371,10 +373,12 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:text="300 Sec"
         android:textSize="36sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView7"
@@ -382,24 +386,44 @@
         android:layout_height="wrap_content"
         android:text="Level 1"
         android:textSize="36sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/all"
-        android:layout_alignStart="@+id/all"
+        android:textSize="20dp"
+        android:text="TextView"
         android:layout_below="@+id/textView7"
-        android:text="TextView" />
+        android:layout_alignLeft="@+id/all"
+        android:layout_alignStart="@+id/all" />
 
     <Button
         android:id="@+id/btnSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7"
-        android:layout_toRightOf="@+id/textView7"
-        android:text="ข้าม" />
+        android:background="?attr/colorPrimary"
+        android:textSize="20dp"
+        android:text="Skip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
+
+    <EditText
+        android:id="@+id/etAns_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtAns_p"
+        android:layout_alignRight="@+id/txtAns_p"
+        android:layout_below="@+id/txtAns_p"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="gone"/>
 
 </RelativeLayout>

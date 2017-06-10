@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class Success extends ActionBarActivity {
 
     Button btnBack, btnExit;
+    boolean saved = false;
     int score;
 
     @Override
@@ -63,7 +64,6 @@ public class Success extends ActionBarActivity {
                 saveStatistic();
                 Intent intent = new Intent(Success.this, Statistic.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -87,24 +87,21 @@ public class Success extends ActionBarActivity {
     @Override
     public void onBackPressed() {
        saveStatistic();
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("คุณต้องการออกจากเกม ใช่หรือไม่?");
-        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                finish();
-            }
-        });
-        alertDialog.setNegativeButton("Cancel", null);
-        alertDialog.show();
+        Intent intent = new Intent(Success.this, Menu.class);
+        startActivity(intent);
+        finish();
     }
 
     public void saveStatistic() {
+        if (saved) {
+            return;
+        }
         MyOpenHelper db = new MyOpenHelper(Success.this);
         SharedPreferences spf = getSharedPreferences("user", MODE_PRIVATE);
         String _id = spf.getString("idUser", "");
 
         db.insertStatistic(_id, score);
         Log.d("StatisticLog", "ID: " + _id + ", Score: " + score);
+        saved = true;
     }
 }

@@ -1,5 +1,6 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -77,4 +78,8 @@ public class Menu extends ActionBarActivity {
         return result;
     }   // userCheck
 
+    public void onBackPressed(){
+        Intent intent = new Intent(Menu.this, Authen.class);
+        startActivity(intent);
+    }
 }

@@ -2,6 +2,7 @@ package apprtc.preeyakamon.hiddinword;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
@@ -49,6 +50,13 @@ public class MyManage {
         return sqLiteDatabase.insert(user_table, null, contentValues);
     }
 
+    public int checkDuplicateUser(String user) {
+        final String rawQuery = String.format("SELECT * FROM userTABLE WHERE %s = \"%s\"",
+                MyManage.column_user,
+                user);
+        Cursor c = sqLiteDatabase.rawQuery(rawQuery, null);
+        return c.getCount();
+    }
 
     public long addValueToPlay(String stridUSER,
                                String strLevel,

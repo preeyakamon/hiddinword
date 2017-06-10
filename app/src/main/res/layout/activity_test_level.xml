@@ -13,8 +13,8 @@
 
     <FrameLayout
         android:id="@+id/all"
-        android:layout_width="350dp"
-        android:layout_height="260dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="280dp">
 
@@ -23,7 +23,7 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Q"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="W"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -45,7 +45,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="E"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="R"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -67,7 +67,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="200dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="T"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -78,7 +78,7 @@
             android:layout_height="45dp"
             android:layout_marginLeft="250dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Y"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -90,7 +90,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="U"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -101,7 +101,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="I"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -113,7 +113,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="O"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -125,7 +125,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="P"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -137,7 +137,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="A"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -149,7 +149,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="S"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -161,7 +161,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="50dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="D"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -173,7 +173,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="F"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -184,7 +184,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="G"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -196,7 +196,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="H"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -208,7 +208,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="J"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -220,7 +220,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="K"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -232,7 +232,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="L"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -244,7 +244,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="100dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="Z"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -256,7 +256,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="X"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -268,7 +268,7 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="C"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -279,7 +279,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="V"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -291,7 +291,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="150dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="B"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -302,7 +302,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="200dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="N"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -314,7 +314,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="200dp"
             android:background="#ffffc2e8"
-            android:onClick="onClickTex"
+            android:onClick="onClickText"
             android:text="M"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -323,8 +323,8 @@
             android:id="@+id/btnDle"
             android:layout_width="60dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="203dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="200dp"
             android:background="#ffffc2e8"
             android:onClick="onClickDel"
             android:text="Del"
@@ -333,15 +333,28 @@
 
         <Button
             android:id="@+id/btnCLE"
-            android:layout_width="90dp"
+            android:layout_width="75dp"
             android:layout_height="45dp"
-            android:layout_marginLeft="170dp"
-            android:layout_marginTop="203dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="200dp"
             android:background="#ffffc2e8"
             android:onClick="onClickClear"
             android:text="Clear"
             android:textSize="20dp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/txtAns"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/txtAns"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="200dp"
+            android:textSize="20dp"
+            android:background="?attr/colorPrimary"
+            android:text="Skip" />
 
     </FrameLayout>
 
@@ -381,23 +394,22 @@
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="32dp"
+        android:textSize="30dp"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
         android:layout_alignLeft="@+id/txtQuest"
         android:layout_alignStart="@+id/txtQuest" />
 
-    <Button
-        android:id="@+id/btnSkip"
+    <EditText
+        android:id="@+id/etAns"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tvScore"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
-        android:layout_marginTop="18dp"
-        android:layout_toLeftOf="@+id/textView5"
-        android:layout_toStartOf="@+id/textView5"
-        android:text="ข้าม" />
+        android:layout_alignLeft="@+id/txtAns"
+        android:layout_alignStart="@+id/txtAns"
+        android:layout_below="@+id/txtAns"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:visibility="gone"/>
 
 </RelativeLayout>
