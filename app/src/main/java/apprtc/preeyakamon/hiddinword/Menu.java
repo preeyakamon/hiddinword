@@ -81,5 +81,6 @@ public class Menu extends ActionBarActivity {
     public void onBackPressed(){
         Intent intent = new Intent(Menu.this, Authen.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -53,13 +53,13 @@ public class playable extends ActionBarActivity {
         tvScore = (TextView) findViewById(R.id.tvScore);
 
         // initial.
-        ints = new int[]{10, 20, 3}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
+        ints = new int[]{2, 3, 4}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
         timeInts = new int[]{300, 240, 180};
 
         // get Level i.e. 1, 2 or 3
         currentLevel = getCurrentLevel();
         intIndex = currentLevel > 0 ? currentLevel - 1 : 0;
-        Log.d("Apimun", "Index: " + intIndex);
+        Log.d("poon", "Index: " + intIndex);
         /* set index for find question array. ใช้ if แบบสั้นหมายความว่า
         ถ้า currentLevel > 0 ให้ intIndex = currentLevel - 1
         แต่ถ้าเท่ากับ 0 หรือน้อยกว่า ให้ intIndex = 0 */

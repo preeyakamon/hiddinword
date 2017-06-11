@@ -1,5 +1,7 @@
 package apprtc.preeyakamon.hiddinword;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -164,7 +166,6 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
     }   // userCheck
 
 
-
     private boolean checkUser() {
 
         boolean result;
@@ -213,6 +214,5 @@ public class Authen extends ActionBarActivity implements View.OnClickListener {
         Log.d(tag, "checkData return ==> " + result);
         return result;
     }
-
 
 }   // Main Class

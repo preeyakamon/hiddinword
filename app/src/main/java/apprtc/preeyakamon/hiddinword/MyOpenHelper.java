@@ -91,7 +91,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String _id = spf.getString("idUser", "");
 //        String sql = "SELECT * FROM statisticTABLE WHERE _id = '" + _id + "' Order by score desc LIMIT 10";
-        String sql = "SELECT * FROM statisticTABLE Order by score asc LIMIT 10";
+        String sql = "SELECT * FROM statisticTABLE Order by score desc LIMIT 10";
         Log.d("StatisticLog", sql);
         try {
             c = db.rawQuery(sql, null);

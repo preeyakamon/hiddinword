@@ -512,7 +512,7 @@
         <item>6</item>
     </string-array>
     <string-array name="Questions_103">
-        <item>S_ _P                    		(ร้านค้า)</item>
+        <item>S_ _ _                    		(ร้านค้า)</item>
         <item>SHOP</item>
         <item>4</item>
     </string-array>
@@ -522,7 +522,7 @@
         <item>7</item>
     </string-array>
     <string-array name="Questions_105">
-        <item>B_N_                    		(ธนาคาร)</item>
+        <item> _ _N_                    	(ธนาคาร)</item>
         <item>BANK</item>
         <item>4</item>
     </string-array>
@@ -537,7 +537,7 @@
         <item>7</item>
     </string-array>
     <string-array name="Questions_108">
-        <item>_ _L_ _ER            			(ทหาร)</item>
+        <item>S _L_ _ER            			(ทหาร)</item>
         <item>SOLDIER</item>
         <item>7</item>
     </string-array>
@@ -557,7 +557,7 @@
         <item>10</item>
     </string-array>
     <string-array name="Questions_112">
-        <item>_A_D                   		(มือ)</item>
+        <item>_A_ _                   		(มือ)</item>
         <item>HAND</item>
         <item>4</item>
     </string-array>
@@ -567,12 +567,12 @@
         <item>3</item>
     </string-array>
     <string-array name="Questions_114">
-        <item>F_ _T                  		(เท้า)</item>
+        <item>F_ _ _                  		(เท้า)</item>
         <item>FOOT</item>
         <item>4</item>
     </string-array>
     <string-array name="Questions_115">
-        <item>A_M                    		(แขน)</item>
+        <item>A_ _                    		(แขน)</item>
         <item>ARM</item>
         <item>3</item>
     </string-array>
@@ -592,7 +592,7 @@
         <item>3</item>
     </string-array>
     <string-array name="Questions_119">
-        <item>B_ _T                  		(เข็มขัด)</item>
+        <item>B_ _ _                  		(เข็มขัด)</item>
         <item>BELT</item>
         <item>4</item>
     </string-array>
