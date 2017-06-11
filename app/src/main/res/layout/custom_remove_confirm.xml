@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:gravity="center"
-        android:hint="กรุณาระบบรหัสผ่าน" />
+        android:hint="กรุณาระบบรหัสผ่าน"
+        android:inputType="textPassword"/>
 
 </LinearLayout>

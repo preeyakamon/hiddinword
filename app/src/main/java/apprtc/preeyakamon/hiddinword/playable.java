@@ -53,7 +53,7 @@ public class playable extends ActionBarActivity {
         tvScore = (TextView) findViewById(R.id.tvScore);
 
         // initial.
-        ints = new int[]{2, 3, 4}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
+        ints = new int[]{10, 20, 30}; // จำนวนข้อที่ต้องตอบให้ถูกในแต่ละ level โดยเรียงจาก level 1 2 3 ตามลำดับ
         timeInts = new int[]{300, 240, 180};
 
         // get Level i.e. 1, 2 or 3
